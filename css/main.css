@@ -22,6 +22,10 @@ form {
   padding-top: 30px;
 }
 
+form span {
+  color: red;
+}
+
 .btn-default:hover {
   background-color: #002E64;
   color: #dfdfdf;
