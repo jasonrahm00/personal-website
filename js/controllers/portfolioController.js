@@ -6,11 +6,8 @@ personalWebsite.controller('portfolioController', ['$scope', 'Page', function ($
     {
       isOpen: true,
       "section": "Front-End Web Development",
-      "description": "Since the spring of 2014, I have been teaching myself front-end web development languages and techniques, and I have received guidance from seasoned web developers on what languages and methods to target. I've also gained real-world experience in development during my contract at Janus Capital Group; I've taken on various development tasks to reduce the workload for the development team.",
+      "description": "Since the spring of 2014, I have been teaching myself front-end web development languages and techniques, and I have received guidance from seasoned web developers on what languages and frameworks to target. I've also gained real-world experience in development during my contract at Janus Capital Group.",
       "examples": [
-        {
-          "explanation": "This website is the first and best example of my current skill-level as a front-end web developer. The site is built with AngularJS and Bootstrap and I will add improvements, functionality and demo applications as time progresses and my knowledge of Angular and development expands."
-        },
         {
           "link": "//www.janus.com/jcg-insti/strategies/janus-global-diversified-risk-premia",
           "anchor": "Select Janus Institutional Pages",
