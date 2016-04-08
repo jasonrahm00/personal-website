@@ -1,0 +1,173 @@
+html {
+  overflow-y: scroll;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+ul li a {
+  font-weight: bold;
+}
+
+h2 {
+  color: #002E64;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+form {
+  padding-top: 30px;
+}
+
+form span {
+  color: red;
+}
+
+.btn-default:hover {
+  background-color: #002E64;
+  color: #dfdfdf;
+}
+
+.panel-defaul, 
+.panel-primary {
+  border-color: #ddd;
+}
+
+.profile-picture {
+  float: right;
+  margin-left: 1em;
+}
+
+.shifted-bottom-small {
+  margin-bottom: 1.5em;
+}
+
+.shifted-top-huge {
+  margin-top: 3.5em;
+}
+
+.shifted-top-medium {
+  margin-top: 2em;
+}
+
+.shifted-bottom-huge {
+  margin-bottom: 3.5em;
+}
+
+.shifted-vertical-huge {
+  margin-top: 3.5em;
+  margin-bottom: 3.5em;
+}
+
+ul li a:hover, 
+ul li a:focus {
+  text-decoration: none;
+  color: #a9a9a9;
+}
+
+a.accordion-toggle {
+  display: block;
+  padding: 10px  15px;
+}
+
+/* Override default button and input borders and outlines */ 
+
+textarea,
+input,
+button,
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover {
+  outline:0px !important;
+  -webkit-appearance:none;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  border-color: #ccc !important;
+}
+
+/* Nav Bar ~jr */
+
+.navbar-default {   
+  background-color: #000f21;
+}
+
+.navbar-default .navbar-brand {
+  color: #a9a9a9;
+}
+
+ul.nav.navbar-nav li a {
+  font-weight: bold;
+  color: #a9a9a9;  
+}
+
+.navbar-default .navbar-brand:hover, 
+.navbar-default .navbar-brand:focus {
+  color: #a9a9a9;
+}
+
+.navbar .nav > .active > a, 
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  background-color: inherit;
+  color: whitesmoke;
+}
+
+ul.nav.navbar-nav li a:hover, 
+ul.nav.navbar-nav li a:focus {
+  color: #dfdfdf;  
+}
+
+/* Panel Override ~jr */
+
+div.panel-heading {
+  padding: 0;
+}
+
+h4.panel-title {
+  color: #a9a9a9;
+}
+
+h4.panel-title a:hover {
+  text-decoration: none;
+  color: #dfdfdf;
+}
+
+h4.panel-title a:focus {
+  text-decoration: none;
+  outline: 0;
+  border: none;
+}
+
+.panel>.panel-heading {
+  background-color: #002E64;
+}
+
+.panel-heading>h3 {
+  color: #a9a9a9;
+}
+
+/* Contact form */
+.contact-form {
+  margin-top: 10px;
+}
+
+.contact-form input.control-label {
+  text-align: left;
+  margin-bottom: 0;
+  padding-top: 7px;
+}
+
+.contact-form label.required:after {
+  content: " *";
+  color: red;
+}
