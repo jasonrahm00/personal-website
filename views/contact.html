@@ -1,26 +1,16 @@
-<h1>Contact Jason Rahm</h1>
-<form method="post" action="php/contactForm.php">
-  <div>
+<div class="contact">
+  <h1>Contact Jason Rahm</h1>
+  <form method="post" action="php/contactForm.php">
     <label for="firstName">First Name <span>*</span></label>
     <input type="text" name="firstName" placeholder="First Name" required>
-  </div>
-  <div>
     <label for="lastName">Last Name <span>*</span></label>
-    <input type="text" class="form-control" name="lastName" placeholder="Last Name" required>
-  </div>
-  <div>
+    <input type="text" name="lastName" placeholder="Last Name" required>
     <label for="lastName">Phone Number</label>
     <input type="tel" name="phoneNumber" placeholder="Phone Number">
-  </div>
-  <div>
     <label for="email">Email <span>*</span></label>
     <input type="email" name="email" placeholder="example@domain.com" required>
-  </div>
-  <div>
     <label for="message">Message <span>*</span></label>
-    <textarea rows="4" name="message" required></textarea>
-  </div>
-  <div>
-    <input id="submit" name="submit" type="submit" value="Send">
-  </div>
-</form> 
+    <textarea rows="4" cols="25" name="message" required></textarea>
+    <input class="button" id="submit" name="submit" type="submit" value="Send">
+  </form> 
+</div>

@@ -22,6 +22,22 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
+button,
+.button {
+  background-color: #002E64;
+  border-radius: 4px;
+  font-weight: bold;
+  color: #fff; 
+}
+
+button:focus,
+.button:focus,
+button:hover,
+.button:hover {
+  background-color: #dfdfdf;
+  color: #002E64;
+}
+
 h1 {
   margin-top: 0;
 }
@@ -40,8 +56,8 @@ a {
 
 main {
   margin: 0 auto;
-  max-width: 1200px;
-  padding: 1em 1.5em;
+  max-width: 1150px;
+  padding: 1em 1.25em;
 }
 
 main a {
@@ -53,8 +69,6 @@ main ul {
   padding-left: 15px;
 }
 
-nav div>a:focus,
-nav div>a:hover,
 ul li a:focus, 
 ul li a:hover {
   color: #dfdfdf;
@@ -65,6 +79,29 @@ ul li a:hover {
   float: right;
   margin-left: 1em;
 }
+
+/* Override default button and input borders and outlines */ 
+
+textarea,
+input,
+button,
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover {
+  outline:0px !important;
+  -webkit-appearance:none;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  border-color: #ccc !important;
+}
+
 
 
 /************************************** 
@@ -89,8 +126,8 @@ nav a {
 nav div {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
-  padding: 0 1.5em;
+  max-width: 1150px;
+  padding: 0 1.5em 1em;
 }
 
 nav div>a {
@@ -101,19 +138,98 @@ nav li {
   list-style: none;
 }
 
+nav li {
+  background: rgba(0, 46, 100, .60);
+  border-radius: 2px;
+  margin-bottom: 5px;
+}
+
+nav li:hover,
+nav li.active {
+  background: rgba(0, 46, 100, 1);
+}
+
+nav div>a:active,
+nav div>a:focus,
+nav a:hover,
+nav li.active a {
+  color: #dfdfdf
+}
+
 nav ul {
   margin: 0;
   padding: 0;
 }
 
+/* ---- Tables ---- */
 
+table {
+  margin-bottom: 20px;
+  width: 100%;
+}
 
-/* ---- Layout Containers ---- */
+table td {
+  padding: 8px;
+}
 
+table.skills tr {
+  border-top: 1px solid #DDD;
+}
 
-/* ---- Page Elements ---- */
+/* ---- Accordion ---- */
+
+a.accordion-toggle {
+  display: block;
+  padding: 10px  15px;
+}
+
+div.panel-heading {
+  padding: 0;
+}
+
+h4.panel-title {
+  color: #a9a9a9;
+}
+
+h4.panel-title a:hover {
+  text-decoration: none;
+  color: #dfdfdf;
+}
+
+h4.panel-title a:focus {
+  text-decoration: none;
+  outline: 0;
+  border: none;
+}
+
+.panel-defaul, 
+.panel-primary {
+  border-color: #ddd;
+}
+
+.panel>.panel-heading {
+  background-color: #002E64;
+}
 
 /* ---- Contact Form ---- */
+
+label {
+  display: block;
+}
+
+input,
+textarea {
+  display: block;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+label span {
+  color: red;
+}
+
 
 
 /*****************************
@@ -160,7 +276,11 @@ nav ul {
 @media (min-width: 796px) {
   
   body {
-    padding-top: 50px; /* to account for the fixed navbar */
+    padding-top: 60px; /* to account for the fixed navbar */
+  }
+  
+  main {
+    padding: 1.5em;
   }
   
   /* ---- Navigation ---- */
@@ -169,6 +289,10 @@ nav ul {
     position: fixed;
     top: 0;
     z-index: 1000;
+  }
+  
+  nav div {
+    padding: 0 1.5em;
   }
   
   nav div>a {
@@ -193,4 +317,20 @@ nav ul {
     display: table;
   }
   
+  /* ---- Contact Form ---- */
+
+  .contact {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  
+  input,
+  textarea {
+    width: 75%;
+  }
+  
+  input.button {
+    width: 85px;
+  }
+
 }
