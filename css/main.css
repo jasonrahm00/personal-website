@@ -82,6 +82,7 @@ ul li a:hover {
 
 /* Override default button and input borders and outlines */ 
 
+a,
 textarea,
 input,
 button,
@@ -94,7 +95,7 @@ input:focus,
 button:focus,
 button:active,
 button:hover {
-  outline:0px !important;
+  outline: 0px !important;
   -webkit-appearance:none;
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
