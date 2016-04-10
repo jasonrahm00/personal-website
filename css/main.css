@@ -1,6 +1,126 @@
+/************************************** 
+  BASE ELEMENT STYLES
+**************************************/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* Permanently places a scrollbar on the right even if the page isn't wide enough for a scroll. This is to prevent the nav elements from shifting when a new view is loaded that doesn't require a scroll bar */
+  overflow-y: scroll; 
+}
+
+a,
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  background-color: whitesmoke;
+  font-family: Helvetica, sans-serif;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+h2 {
+  color: #002E64;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+a {
+  font-weight: bold;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 1em 1.5em;
+}
+
+main a {
+  color: #337ab7;
+}
+
+main ul {
+  list-style-position: inside;
+  padding-left: 15px;
+}
+
+nav div>a:focus,
+nav div>a:hover,
+ul li a:focus, 
+ul li a:hover {
+  color: #dfdfdf;
+}
+
+.profile-picture {
+  border-radius: 5px;
+  float: right;
+  margin-left: 1em;
+}
+
+
+/************************************** 
+  BASE LAYOUT STYLES
+**************************************/
+
+/* ---- Navigation ---- */
+
+nav {
+  background-color: #000f21;
+  left: 0;
+  right: 0;
+}
+
+nav a {
+  color: #a9a9a9;
+  display: block;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+nav div {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  padding: 0 1.5em;
+}
+
+nav div>a {
+  font-size: 1.5em;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* ---- Layout Containers ---- */
+
+
+/* ---- Page Elements ---- */
+
+/* ---- Contact Form ---- */
+
+
 /*****************************
   ANIMATIONS
 *****************************/
+
+/* View Change Navigation */
 
 .slide-view {
   position: relative;
@@ -29,4 +149,48 @@
 .slide-view.ng-leave.ng-leave-active {
   left: -7em;
   opacity:0;
+}
+
+
+
+/************************************** 
+  MEDIA QUERIES
+**************************************/
+
+@media (min-width: 796px) {
+  
+  body {
+    padding-top: 50px; /* to account for the fixed navbar */
+  }
+  
+  /* ---- Navigation ---- */
+  
+  nav {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  nav div>a {
+    float: left;
+    padding-left: 0;
+  }
+
+  nav ul {
+    float: right;
+    margin-top: 5px;
+  }
+
+  nav li {
+    display: inline-block;
+  }
+  
+  /* ---- Float Clearfix ---- */
+  
+  nav div:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  
 }
