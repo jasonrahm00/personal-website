@@ -1,5 +1,5 @@
-personalWebsite.controller('portfolioController', ['$scope', 'Page', function ($scope, Page) {
-  Page.setMeta("Peruse a sample of Jason's work.");
+personalWebsite.controller('portfolioController', ['$scope', function ($scope) {
+  //Page.setMeta("Peruse a sample of Jason's work.");
   $scope.mainHeader = "Jason Rahm's Portfolio";
   $scope.oneAtATime = true;
   $scope.portfolio = [
