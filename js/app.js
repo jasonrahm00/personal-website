@@ -30,4 +30,4 @@ personalWebsite.config(function ($stateProvider, $urlRouterProvider) {
   
   $urlRouterProvider.otherwise('/');
   
-})
+});
