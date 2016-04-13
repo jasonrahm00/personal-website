@@ -57,7 +57,7 @@ a {
 main {
   margin: 0 auto;
   max-width: 1150px;
-  padding: 1em 1.25em;
+  padding: 1em 1.5em;
 }
 
 main a {
@@ -281,7 +281,7 @@ label span {
   }
   
   main {
-    padding: 1.5em;
+    padding: 1.5em 2.25em;
   }
   
   /* ---- Navigation ---- */
