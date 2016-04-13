@@ -1,5 +1,4 @@
 personalWebsite.controller('resumeController', ['$scope', function ($scope) {
-  //Page.setMeta("See Jason's work and education history and his current skillset.");
   $scope.name = "Jason Rahm";
   $scope.mainHeader = "Jason Rahm's Resume";
   $scope.objective = "Junior/Intermediate Front-End Developer and Content Manager with an extensive background in content creation, website development and content management for a variety of eBusinesses and startups. Uniquely qualified to assist in the development and redevelopment of first-rate websites and web-based content. Self-driven lifelong learner who is always looking for ways to improve the experience for both internal and external website users.";
