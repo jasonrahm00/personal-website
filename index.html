@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <meta content="" name="description">
+    <meta content="{{ $state.current.data.description }}" name="description">
 
-    <title>Jason Rahm</title>
+    <title data-ng-bind="$state.current.data.title">Jason Rahm</title>
 
     <!-- Favicon -->
     <!--[if IE]><link rel="shortcut icon" href="path/to/favicon.ico"><![endif]-->
