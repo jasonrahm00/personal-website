@@ -8,6 +8,16 @@ personalWebsite.controller('portfolioController', ['$scope', function ($scope) {
       "explanation": "I'm creating a Personal Budget Application using AngularJS, CSS, JavaScript and HTML. All of the free budget applications that I've found online are based on spreadsheets, and I hate using spreadsheets. So, I'm building my own. Currently, you're only able to add, edit, delete and print budget information. There is no backend support or user states; that's further down the road. I'm going to keep developing this application, so stay tuned."
     },
     {
+      "link": "//www.coleman.com/coleman-history-us.html",
+      "anchor": "Coleman Company History",
+      "explanation": "The Coleman history page used to be split out into half-a-dozen different pages, each of which was horribly laid out. I combined everything into one page with the different history snippets placed in a scrollable <div>. A JavaScript scroll to function jumps the scrollable div to the corresponding era."
+    },
+    {
+      "link": "//www.coleman.com/coleman-events.html",
+      "anchor": "Coleman Events",
+      "explanation": "The Coleman retail department wanted a page on the website to showcase upcomming tent sale events in an effort to increase awareness and drive more people to the events. I used JavaScript and the Google Maps JavaScript API to create a map with markers at each location and corresponding event information cards/popups. Everything below the <h1> and intro paragraphs is generated dynamically using JS. When an event date has passed, it automatically drops off of the page. Furthermore, if there are no current or future events, no map or cards display - only a 'check back later' message."
+    },
+    {
       "link": "//www.janus.com/jcg-insti/strategies/janus-global-diversified-risk-premia",
       "anchor": "Select Janus Institutional Pages",
       "explanation": "The Institutional arm of Janus wanted some of their pages completely redesigned and a few new funds added. Unfortunately, the Institutional site is on an older technology stack and CMS and is difficult to manage; new designs are next to impossible without a significant time commitment from the developer team. So, the digital marketing manager looked to me to solve this problem. Using a lot of jQuery and cowboy-style coding (but very minimal inline styling), I was able to provide the pages the Institutional business was looking for while maintaining the look and feel of the actual Institutional site. The above linked page along with the 'Investment Insights', 'Defined Contribution' and 'About Us' pages in the main navigation bar utilize my custom styles while the other buttons take you to the standard Institutional site."
@@ -31,16 +41,6 @@ personalWebsite.controller('portfolioController', ['$scope', function ($scope) {
       "link": "//www.janus.com/retail/planning/investing-basics/investor-education",
       "anchor": "Investor Education",
       "explanation": "The Java language and Grails framework are used by Janus to dynamically generate data tables throughout the site, primarily on the fund pages. I was able to repurpose the code for one of those tables to create this page. Since Janus content has an expiration date, whenver one of the documents on this table expires, the row will disappear until the content is refreshed and the expiration date changed."
-    },
-    {
-      "link": "//www.coleman.com/coleman-history-us.html",
-      "anchor": "Coleman Company History",
-      "explanation": "The Coleman history page used to be split out into half-a-dozen different pages, each of which was horribly laid out. I combined everything into one page with the different history snippets placed in a scrollable <div>. A JavaScript scroll to function jumps the scrollable div to the corresponding era."
-    },
-    {
-      "link": "//www.coleman.com/coleman-events.html",
-      "anchor": "Coleman Events",
-      "explanation": "The Coleman retail department wanted a page on the website to showcase upcomming tent sale events in an effort to increase awareness and drive more people to the events. I used JavaScript and the Google Maps JavaScript API to create a map with markers at each location and corresponding event information cards/popups. Everything below the <h1> and intro paragraphs is generated dynamically using JS. When an event date has passed, it automatically drops off of the page. Furthermore, if there are no current or future events, no map or cards display - only a 'check back later' message."
-    }
+    }    
   ];
 }]);

@@ -16,12 +16,26 @@ personalWebsite.controller('resumeController', ['$scope', function ($scope) {
   ];
   $scope.skills = {
     "Content Management Systems": ["Ingeniux", "NetSuite", "WordPress", "Bigcommerce", "Additional Custom Platforms"],
-    "Web Development": ["AngularJS", "HTML", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Grails", "PHP", "Python"],
+    "Web Development": ["AngularJS", "HTML", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Grails"],
     "Project Management": ["Confluence", "Jira", "Trello"],
-    "Authoring": ["Microsoft Office Suite", "AP Style"],
-    "Marketing": ["MailChimp"]
+    "Authoring": ["Microsoft Office Suite", "AP Style"]
   };
   $scope.jobs = [
+    {
+      "title": "Web Manager/Developer",
+      "employer": "Coleman.com",
+      "start": {
+        "month": "May",
+        "year": 2016
+      },
+      "description": "Responsible for managing, updating and maintaining the Coleman.com eCommerce site.",
+      "duties": [
+        "Assist with SEO/content needs.",
+        "Development projects as needed.",
+        "Manage and update content in the DemandWare CMS.",
+        "Work with the creative team to set project expectations and deliverables."
+      ]
+    },
     {
       "title": "Content Manager",
       "employer": "SavvyBoater.com",
