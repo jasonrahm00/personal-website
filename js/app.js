@@ -20,7 +20,6 @@ personalWebsite.config(['$stateProvider', '$urlRouterProvider',  function ($stat
     .state('home', {
       url: '',
       templateUrl: 'views/home.html',
-      controller: 'homePageController',
       data: {
         title: 'Jason Rahm',
         description: 'This website was custom-built by Jason Rahm to showcase his work history and talents.'
