@@ -177,41 +177,6 @@ table.skills tr {
   border-top: 1px solid #DDD;
 }
 
-/* ---- Accordion ---- */
-
-a.accordion-toggle {
-  display: block;
-  padding: 10px  15px;
-}
-
-div.panel-heading {
-  padding: 0;
-}
-
-h4.panel-title {
-  color: #a9a9a9;
-}
-
-h4.panel-title a:hover {
-  text-decoration: none;
-  color: #dfdfdf;
-}
-
-h4.panel-title a:focus {
-  text-decoration: none;
-  outline: 0;
-  border: none;
-}
-
-.panel-defaul, 
-.panel-primary {
-  border-color: #ddd;
-}
-
-.panel>.panel-heading {
-  background-color: #002E64;
-}
-
 /* ---- Contact Form ---- */
 
 label {

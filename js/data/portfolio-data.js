@@ -12,6 +12,11 @@
       "explanation": "The Coleman history page used to be split out into half-a-dozen different pages, each of which was horribly laid out. I combined everything into one page with the different history snippets placed in a scrollable <div>. A JavaScript scroll to function jumps the scrollable div to the corresponding era."
     },
     {
+      "link": "//www.coleman.com/coleman-checklists.html",
+      "anchor": "Coleman Checklists",
+      "explanation": "This page was redesigned to provide all of the available checklists in one place. Originally, the user had to navigate several pages and a sign-in form to access a single checklist, and they had to sign in for each checklist. Now, a single click will load the checklist in the iframe space indicated; the images, links, content and iframes are loaded dynamically with JavaScript. Third-party cookies are required to view the checklists in the iframe, so a check is included to verify that the user has third-party cookies enabled."
+    },
+    {
       "link": "//www.coleman.com/coleman-events.html",
       "anchor": "Coleman Events",
       "explanation": "The Coleman retail department wanted a page on the website to showcase upcomming tent sale events in an effort to increase awareness and drive more people to the events. I used JavaScript and the Google Maps JavaScript API to create a map with markers at each location and corresponding event information cards/popups. Everything below the <h1> and intro paragraphs is generated dynamically using JS. When an event date has passed, it automatically drops off of the page. Furthermore, if there are no current or future events, no map or cards display - only a 'check back later' message."
