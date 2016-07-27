@@ -1,25 +1,29 @@
-personalWebsite.controller('portfolioController', ['$scope', '$http', function ($scope, $http) {
+//Portfolio Controller
+personalWebsite.controller('portfolioController', ['$scope', 'portfolioFactory', function ($scope, portfolioFactory) {
   
-  $http({
-    method : "GET",
-    url : "/js/data/portfolio-data.js"
-  }).then(function dataSuccess(response) {
-    $scope.portfolio = response.data;
-  }, function myError(response) {
-    $scope.portfolio = response.statusText;
+  $scope.portfolio;
+  $scope.status;
+  
+  portfolioFactory.getPortfolio()
+    .then(function(response){
+      $scope.portfolio = response.data;
+    }, function(error) {
+      $scope.status = 'Unable to retreive data: ' + error.message;
   });
   
 }]);
 
-personalWebsite.controller('resumeController', ['$scope', '$http', function ($scope, $http) {
+//Resume Controller
+personalWebsite.controller('resumeController', ['$scope', 'resumeFactory', function ($scope, resumeFactory) {
   
-  $http({
-    method : "GET",
-    url : "/js/data/resume-data.js"
-  }).then(function dataSuccess(response) {
-    $scope.resume = response.data;
-  }, function myError(response) {
-    $scope.resume = response.statusText;
+  $scope.resume;
+  $scope.status;
+  
+  resumeFactory.getResume()
+    .then(function(response){
+      $scope.resume = response.data;
+    }, function(error) {
+      $scope.status = 'Unable to retreive data: ' + error.message;
   });
   
 }]);
