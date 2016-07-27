@@ -1,10 +1,11 @@
 //Portfolio Controller
-personalWebsite.controller('portfolioController', ['$scope', 'portfolioFactory', function ($scope, portfolioFactory) {
+personalWebsite.controller('portfolioController', ['$scope', 'dataFactory', function ($scope, dataFactory) {
   
+  var portfolioDataUrl = 'js/data/portfolio-data.js';
   $scope.portfolio;
   $scope.status;
   
-  portfolioFactory.getPortfolio()
+  dataFactory.getPageData(portfolioDataUrl)
     .then(function(response){
       $scope.portfolio = response.data;
     }, function(error) {
@@ -14,12 +15,13 @@ personalWebsite.controller('portfolioController', ['$scope', 'portfolioFactory',
 }]);
 
 //Resume Controller
-personalWebsite.controller('resumeController', ['$scope', 'resumeFactory', function ($scope, resumeFactory) {
+personalWebsite.controller('resumeController', ['$scope', 'dataFactory', function ($scope, dataFactory) {
   
+  var resumeDataUrl = 'js/data/resume-data.js';
   $scope.resume;
   $scope.status;
   
-  resumeFactory.getResume()
+  dataFactory.getPageData(resumeDataUrl)
     .then(function(response){
       $scope.resume = response.data;
     }, function(error) {
