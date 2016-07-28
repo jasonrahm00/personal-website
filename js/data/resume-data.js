@@ -15,8 +15,8 @@
     "Direct experience with e-business startup tactics and growth stratagems, including the execution of strategic development projects."
   ],
   "skills": {
-    "Content Management Systems": ["Ingeniux", "NetSuite", "WordPress", "Bigcommerce", "Additional Custom Platforms"],
     "Web Development": ["AngularJS", "HTML", "CSS3", "JavaScript", "jQuery", "Bootstrap", "Grails"],
+    "Web Design": ["UI/UX Basics", "Photoshop", "Responsive/Mobile-First Design"],
     "Project Management": ["Confluence", "Jira", "Trello"],
     "Authoring": ["Microsoft Office Suite", "AP Style"]
   },

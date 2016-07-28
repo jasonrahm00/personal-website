@@ -1,6 +1,6 @@
 <header>
   <h1>{{portfolio.mainHeader}}</h1>
-  <p>I began my professional career as a web-content writer, and it was as a writer that I gained my first exposure to HTML, CSS and web-development processes. In the last couple of years, I have changed my focus to front-end development and am constanlty teaching myself more about the field while gaining on-the-job experience.</p>
+  <p data-ng-repeat="paragraph in portfolio.intro">{{ paragraph }}</p>
 </header>
 
 <ul>
