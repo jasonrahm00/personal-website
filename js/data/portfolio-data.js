@@ -20,11 +20,6 @@
       "explanation": "The Coleman retail department wanted a page on the website to showcase upcomming tent sale events in an effort to increase awareness and drive more people to the events. I used JavaScript and the Google Maps JavaScript API to create a map with markers at each location and corresponding event information cards/popups. Everything below the <h1> and intro paragraphs is generated dynamically using JS. When an event date has passed, it automatically drops off of the page. Furthermore, if there are no current or future events, no map or cards display - only a 'check back later' message."
     },
     {
-      "link": "//www.coleman.com/coleman-history-us.html",
-      "anchor": "Coleman Company History",
-      "explanation": "The Coleman history page used to be split out into half-a-dozen different pages, each of which was horribly laid out. I combined everything into one page with the different history snippets placed in a scrollable <div>. A JavaScript scroll to function jumps the scrollable div to the corresponding era."
-    },
-    {
       "link": "//www.janus.com/retail",
       "anchor": "Individual Investors",
       "explanation": "This is the main project I worked on at Janus. I worked collaboratively with the Marketing, Dev and Design teams, as well as other contractors, to bring this site to completion. Aside from helping to build the pages/site, one major contribution I had was providing feedback when the original designs and content weren't laid out properly or optimized for the web."
