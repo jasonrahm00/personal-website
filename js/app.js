@@ -18,7 +18,7 @@ personalWebsite.config(['$stateProvider', '$urlRouterProvider',  function ($stat
     // View states for main pages linked in Nav
   
     .state('home', {
-      url: '',
+      url: '/',
       templateUrl: 'views/home.html',
       data: {
         title: 'Jason Rahm',

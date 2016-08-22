@@ -1,7 +1,7 @@
 //Portfolio Controller
 personalWebsite.controller('portfolioController', ['$scope', 'dataFactory', function ($scope, dataFactory) {
   
-  var portfolioDataUrl = 'js/data/portfolio-data.js';
+  var portfolioDataUrl = 'js/data/portfolio-data.json';
   $scope.portfolio;
   $scope.status;
   
@@ -17,7 +17,7 @@ personalWebsite.controller('portfolioController', ['$scope', 'dataFactory', func
 //Resume Controller
 personalWebsite.controller('resumeController', ['$scope', 'dataFactory', function ($scope, dataFactory) {
   
-  var resumeDataUrl = 'js/data/resume-data.js';
+  var resumeDataUrl = 'js/data/resume-data.json';
   $scope.resume;
   $scope.status;
   

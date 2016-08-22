@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html data-ng-app="personalWebsite" lang="en">
-  <head>  
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,7 +35,10 @@
       </div>
     </nav>
     
-    <main data-ui-view data-ng-class="$state.current.name"></main>
+    <div class="ui-view-container">
+      <main data-ui-view data-ng-class="$state.current.name"></main>
+    </div>
+    
 
     <!-- App -->
     <script src="js/app.js"></script>
