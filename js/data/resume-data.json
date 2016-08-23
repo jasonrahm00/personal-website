@@ -28,12 +28,16 @@
         "month": "May",
         "year": 2016
       },
+      "end": {
+        "month": "August",
+        "year": 2016
+      },
       "description": "Responsible for managing, updating and maintaining the Coleman.com eCommerce site.",
       "duties": [
         "Assist with SEO/content needs.",
-        "Development projects as needed.",
         "Manage and update content in the DemandWare CMS.",
-        "Work with the creative team to set project expectations and deliverables."
+        "Redesign and redevelop content pages for better usability and responsiveness.",
+        "Attend weekly meetings with marketing team to discuss metrics and site improvement plans."
       ]
     },
     {
