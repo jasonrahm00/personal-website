@@ -15,11 +15,6 @@
       "explanation": "This page was redesigned to provide all of the available checklists in one place. Originally, the user had to navigate several pages and a sign-in form to access a single checklist, and they had to sign in for each checklist. Now, a single click will load the checklist in the iframe space indicated; the images, links, content and iframes are loaded dynamically with JavaScript. Third-party cookies are required to view the checklists in the iframe, so a check is included to verify that the user has third-party cookies enabled."
     },
     {
-      "link": "//www.coleman.com/coleman-events.html",
-      "anchor": "Coleman Events",
-      "explanation": "The Coleman retail department wanted a page on the website to showcase upcomming tent sale events in an effort to increase awareness and drive more people to the events. I used JavaScript and the Google Maps JavaScript API to create a map with markers at each location and corresponding event information cards/popups. Everything below the <h1> and intro paragraphs is generated dynamically using JS. When an event date has passed, it automatically drops off of the page. Furthermore, if there are no current or future events, no map or cards display - only a 'check back later' message."
-    },
-    {
       "link": "//www.coleman.com/hyperflame-technology.html",
       "anchor": "Coleman Technology",
       "explanation": "My last project at Coleman was to create several pages to highlight the various technologies the company had invented. I was given a free hand with the design and layout. The content came from the various catalogs and images were found in the database. I’m pleased with the resulting “tech center”. However, I was limited to inline JavaScript and styling, so there are no shared components between the pages (the left nav should be a common component). I hope, in the future, they are able to turn this into a template-driven section of the site."
