@@ -80,6 +80,12 @@ ul li a:hover {
   margin-left: 1em;
 }
 
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
 /* Override default button and input borders and outlines */ 
 
 a,
@@ -96,7 +102,6 @@ button:focus,
 button:active,
 button:hover {
   outline: 0px !important;
-  -webkit-appearance:none;
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
   box-shadow: none !important;
