@@ -106,6 +106,13 @@ button:hover {
   -moz-box-shadow: none !important;
   box-shadow: none !important;
   border-color: #ccc !important;
+  border-style: outside;
+}
+
+input {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc
 }
 
 
@@ -190,6 +197,10 @@ table.skills tr {
   border-top: 1px solid #DDD;
 }
 
+th {
+  padding: 8px;
+}
+
 /* ---- Contact Form ---- */
 
 label {
@@ -199,9 +210,6 @@ label {
 .contact input,
 .contact textarea {
   display: block;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
   margin-bottom: 10px;
   width: 75%;
 }
