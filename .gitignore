@@ -1,3 +1,5 @@
 # Exclude PHP files from version tracking
 
 *.php
+dist
+node_modules

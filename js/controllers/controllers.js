@@ -1,7 +1,7 @@
 //Portfolio Controller
-personalWebsite.controller('portfolioController', ['$scope', 'dataFactory', function ($scope, dataFactory) {
+angular.module('personalWebsite').controller('portfolioController', function ($scope, dataFactory) {
   
-  var portfolioDataUrl = 'js/data/portfolio-data.json';
+  var portfolioDataUrl = '../../data/portfolio-data.json';
   $scope.portfolio;
   $scope.status;
   
@@ -12,12 +12,12 @@ personalWebsite.controller('portfolioController', ['$scope', 'dataFactory', func
       $scope.status = 'Unable to retreive data: ' + error.message;
   });
   
-}]);
+});
 
 //Resume Controller
-personalWebsite.controller('resumeController', ['$scope', 'dataFactory', function ($scope, dataFactory) {
+angular.module('personalWebsite').controller('resumeController', function ($scope, dataFactory) {
   
-  var resumeDataUrl = 'js/data/resume-data.json';
+  var resumeDataUrl = '../../data/resume-data.json';
   $scope.resume;
   $scope.status;
   
@@ -28,4 +28,4 @@ personalWebsite.controller('resumeController', ['$scope', 'dataFactory', functio
       $scope.status = 'Unable to retreive data: ' + error.message;
   });
   
-}]);
+});

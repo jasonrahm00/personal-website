@@ -14,11 +14,11 @@
   <h2>Skills</h2>
   <table class="skills">
     <tr data-ng-repeat="(key, value) in resume.skills">
-      <td><strong>{{key}}</strong></td>
+      <th scope="row">{{key}}</th>
       <td>{{value.join(", ")}}</td>
     </tr>
     <tr>
-      <td><strong>Github</strong></td>
+      <th scope="row">Github</th>
       <td><a href="//github.com/jasonrahm00" target="_blank">github.com/jasonrahm00</a></td>
     </tr>
   </table>

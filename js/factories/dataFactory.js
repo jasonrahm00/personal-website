@@ -1,4 +1,4 @@
-personalWebsite.factory('dataFactory', ['$http', function($http){
+angular.module('personalWebsite').factory('dataFactory', function($http){
   
   var pageData = {};
   
@@ -8,4 +8,4 @@ personalWebsite.factory('dataFactory', ['$http', function($http){
 
   return pageData;
   
-}]);
+});

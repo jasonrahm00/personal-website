@@ -19,7 +19,9 @@ a:hover {
 
 body {
   background-color: whitesmoke;
+  color: #333;
   font-family: Helvetica, sans-serif;
+  font-size: 14px;
 }
 
 button,
@@ -37,13 +39,29 @@ button:hover,
   background-color: #dfdfdf;
   color: #002E64;
 }
+button:hover,
+.button:hover {
+  cursor: pointer;
+}
 
 h1 {
+  font-size: 2.25rem;
   margin-top: 0;
 }
 
 h2 {
   color: #002E64;
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h1,
+h2,
+h3 {
+  margin: 1.25rem 0 1rem 0;
 }
 
 h1, 
@@ -86,6 +104,11 @@ ul li a:hover {
   display: table;
 }
 
+.loading-screen {
+  padding: 2rem;
+  text-align: center;
+}
+
 /* Override default button and input borders and outlines */ 
 
 a,
@@ -106,7 +129,6 @@ button:hover {
   -moz-box-shadow: none !important;
   box-shadow: none !important;
   border-color: #ccc !important;
-  border-style: outside;
 }
 
 input {
@@ -185,6 +207,7 @@ nav ul {
 /* ---- Tables ---- */
 
 table {
+  border-collapse: collapse;
   margin-bottom: 20px;
   width: 100%;
 }
@@ -193,8 +216,12 @@ table td {
   padding: 8px;
 }
 
-table.skills tr {
-  border-top: 1px solid #DDD;
+table.skills td,
+table.skills th {
+  border-top: 1px solid #ccc;
+}
+table.skills th {
+  text-align: left;
 }
 
 th {

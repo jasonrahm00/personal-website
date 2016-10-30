@@ -1,9 +1,9 @@
-var personalWebsite = angular.module('personalWebsite', ['ngAnimate', 'ui.router' ]);
+angular.module('personalWebsite', ['ui.router' ]);
 
 /*  Changes the root scope to match the new view state when the state changes allowing me to dynamically update page header components by adding them to the data object in the view states below.
     Solution from the Coderwall Website: https://coderwall.com/p/zk7qww/dynamic-site-page-titles-with-angular-and-ui-router */
 
-personalWebsite.run(function($rootScope, $state) {
+angular.module('personalWebsite').run(function($rootScope, $state) {
   $rootScope.$on('$stateChangeStart', function() {
     $rootScope.$state = $state;
   })
@@ -11,7 +11,7 @@ personalWebsite.run(function($rootScope, $state) {
 
 //ROUTES
 
-personalWebsite.config(['$stateProvider', '$urlRouterProvider',  function ($stateProvider, $urlRouterProvider) {
+angular.module('personalWebsite').config(function ($stateProvider, $urlRouterProvider) {
   
   $stateProvider
     
@@ -54,4 +54,4 @@ personalWebsite.config(['$stateProvider', '$urlRouterProvider',  function ($stat
   
   $urlRouterProvider.otherwise('/');
   
-}]);
+});
