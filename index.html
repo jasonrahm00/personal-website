@@ -34,7 +34,7 @@
     </nav>
     
     <main data-ui-view data-ng-class="$state.current.name">
-      <div class="loading-screen">
+      <div data-ng-if="loading" class="loading-screen">
         <h2>Loading...</h2>
         <img alt="GIF of Mario jumping on a continuous stream of Goombas" src="images/mario-killing-goombas.gif">
       </div>
