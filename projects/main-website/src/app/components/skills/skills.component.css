@@ -1,0 +1,14 @@
+figure {
+  display: inline-block;
+  text-align: center;
+  width: 100px;
+}
+
+figure img {
+  max-height: 100px;
+  width: 100%;
+}
+
+.container {
+  padding: 0 25px;
+}

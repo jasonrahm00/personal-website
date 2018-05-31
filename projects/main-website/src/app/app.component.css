@@ -1,0 +1,40 @@
+.is-mobile .sidenav-container {
+  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+     `<body>` to be our scrolling element for mobile layouts. */
+  flex: 1 0 auto;
+}
+
+.sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+}
+
+.mat-drawer {
+  width: 200px;
+}
+
+.mat-nav-list {
+  padding-top: 60px;
+}
+
+.toolbar {
+  position: fixed;
+  top: 0;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  -moz-box-shadow:    0 3px 5px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow:         0 3px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

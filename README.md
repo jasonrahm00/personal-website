@@ -1,3 +1,4 @@
-# Personal Website: jasonrahm.net
+# AngularApps
 
-This contains all of the files for my personal website.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
+

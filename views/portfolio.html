@@ -1,8 +1,0 @@
-<header>
-  <h1>{{portfolio.mainHeader}}</h1>
-  <p data-ng-repeat="paragraph in portfolio.intro">{{ paragraph }}</p>
-</header>
-
-<ul>
-  <li data-ng-repeat="example in portfolio.examples"><span data-ng-show="example.link"><a href="{{example.link}}" target="_blank">{{example.anchor}}</a> &ndash; </span>{{example.explanation}}</li>
-</ul>

@@ -1,0 +1,41 @@
+<h2>Skills</h2>
+
+<div class="container">
+  <mat-card>
+    <mat-card-title>
+      <h3>Web Development</h3>
+    </mat-card-title>
+    <!-- OrderBy Pipe: http://www.fueltravel.com/blog/migrating-from-angular-1-to-2-part-1-pipes/ -->
+    <mat-card-content>
+      <figure *ngFor="let x of skills.webDev">
+        <img src="assets/logos/{{ x | lowercase }}.png" alt="">
+        <figcaption>{{ x }}</figcaption>
+      </figure>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>
+      <h3>Project Management</h3>
+    </mat-card-title>
+    <mat-card-content>
+      <figure *ngFor="let x of skills.projManage">
+        <img src="assets/logos/{{ x | lowercase }}.png" alt="">
+        <figcaption>{{ x }}</figcaption>
+      </figure>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <mat-card-title>
+      <h3>Other</h3>
+    </mat-card-title>
+    <mat-card-content>
+      <figure *ngFor="let x of skills.other">
+        <img src="assets/logos/{{ x | lowercase }}.png" alt="">
+        <figcaption>{{ x }}</figcaption>
+      </figure>
+    </mat-card-content>
+  </mat-card>
+</div>
+
