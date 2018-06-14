@@ -1,35 +1,55 @@
+* {
+  font-family: "Roboto", sans-serif;
+  color: #464646;
+}
+
 h1 {
   margin-left: 8px;
 }
 
 h2 {
+  background-color: #0053b3;
+  color: white;
   font-size: 2.29rem;
+  font-weight: normal;
   line-height: 3.212rem;
   margin: 1.46rem 0 60px 0;
-  text-transform: uppercase;
-  background-color: rgb(0, 83, 179);
-  color: white;
   padding: 30px 40px;
+  text-transform: uppercase;
+}
+
+h3 {
+color: #0053b3;
 }
 
 main {
-  padding: 85px 0;
   background: whitesmoke;
+  padding: 85px 0;
 }
 
+.container,
 .mat-card {
-  max-width: 1280px;
   margin: 0 auto 60px;
-  background: white;
+  max-width: 1280px;
   padding: 0 1.5rem;
 }
 
-.mat-card-title > h3 {
+.mat-card {
+  background: #fff;
+}
+
+.mat-card-content {
+  margin-top: 30px;
+}
+
+.mat-card-title {
   border-bottom: 1px solid #ddd;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 20px; 
+}
+
+.mat-card-title > h3 {
   font-size: 2.28rem;
   font-weight: normal;
   line-height: 2.508rem;
-  margin: 1.14rem 0 0.912rem 0l
+  margin: 1.14rem 0 0 0;     
 }

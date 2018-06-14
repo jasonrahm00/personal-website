@@ -7,10 +7,9 @@
                  (closed)="navOpen = false">
       <mat-nav-list>
         <a mat-list-item>About</a>
-        <a mat-list-item>Expertise</a>
         <a mat-list-item>Experience</a>
+        <a mat-list-item>Skills</a>
         <a mat-list-item>Education</a>
-        <a mat-list-item>Projects</a>
         <a mat-list-item>Contact</a>
       </mat-nav-list>
     </mat-sidenav>
@@ -26,16 +25,24 @@
       </mat-toolbar>
       <main>
         <section>
-          <h2>About Me</h2>
+          <h2>About</h2>
+          <div class="container about">
+            <p *ngFor="let x of about">{{ x }}</p>
+          </div>
         </section>
+        
         <app-experience></app-experience>
+
+        <app-skills></app-skills>
+        
         <section>
           <h2>Education</h2>
         </section>
-        <app-skills></app-skills>
+        
         <section>
-          <h2>Contact Me</h2>
+          <h2>Contact</h2>
         </section>
+        
       </main>
     </mat-sidenav-content>
   </mat-sidenav-container>

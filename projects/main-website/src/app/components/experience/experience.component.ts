@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { GetDataService } from '../../get-data.service';
+
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperienceComponent implements OnInit {
 
-  constructor() { }
+  jobs: any = [];
+
+  constructor(private getDataService: GetDataService) { }
 
   ngOnInit() {
+    this.getDataService.getResume().subscribe(data => {
+      this.jobs = data.jobs;
+    });
   }
 
 }

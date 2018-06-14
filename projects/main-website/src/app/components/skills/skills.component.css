@@ -1,3 +1,7 @@
+.container {
+  padding: 0 25px;
+}
+
 figure {
   display: inline-block;
   text-align: center;
@@ -7,8 +11,4 @@ figure {
 figure img {
   max-height: 100px;
   width: 100%;
-}
-
-.container {
-  padding: 0 25px;
 }

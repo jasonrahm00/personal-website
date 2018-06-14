@@ -1,1 +1,20 @@
-<h2>Work Experience</h2>
+<h2>Experience</h2>
+
+<mat-card *ngFor="let job of jobs">
+  <mat-card-title>
+    <h3>{{ job.employer }}</h3>
+    <span class="job-length">
+      {{ job.start.month }}, {{ job.start.year }} - 
+      <span *ngIf="job.end">{{ job.end.month }}, {{ job.end.year}}</span>
+      <span *ngIf="!job.end">Present</span>
+    </span>
+  </mat-card-title>
+  <!-- OrderBy Pipe: http://www.fueltravel.com/blog/migrating-from-angular-1-to-2-part-1-pipes/ -->
+  <mat-card-content>
+    <span class="job-title">{{ job.title }}</span>
+    <p>{{ job.description }}</p>
+    <ul *ngIf="job.duties">
+      <li *ngFor="let duty of job.duties">{{ duty }}</li>
+    </ul>
+  </mat-card-content>
+</mat-card>
