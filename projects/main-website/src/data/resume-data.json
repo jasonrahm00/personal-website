@@ -4,10 +4,12 @@
     "When I'm not working or improving this website, you may see me out running around Denver or on the mountain trails. I also play online video games in my free time; World of Warcraft is my current poison of choice. When I need a break from the computer screen, I read or write."
   ],
   "education": {
-    "completed": 2004,
+    "end": 2004,
+    "start": 2000,
     "school": "Purdue University",
-    "degree": "Bachelors",
-    "major": "English and Psychology"
+    "degree": "Bachelor of Arts",
+    "major": "English and Psychology",
+    "city": "West Lafayette, IN"
   },
   "qualifications": [
     "Proven record of quick turnaround on all development tasks and an enthusiasm for learning new technologies and tackling challenging projects.",

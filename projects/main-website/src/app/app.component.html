@@ -21,29 +21,52 @@
                 disableRipple="true">
           <mat-icon>{{ navOpen ? 'close' : 'menu' }}</mat-icon>
         </button>
-        <h1 class="app-name">Jason Rahm</h1>
+        <span class="app-name">Jason Rahm</span>
       </mat-toolbar>
-      <main>
-        <section>
-          <h2>About</h2>
-          <div class="container about">
-            <p *ngFor="let x of about">{{ x }}</p>
-          </div>
-        </section>
-        
-        <app-experience></app-experience>
+      
+      <div class="main-content-wrapper">
+        <header class="container site-header">
+          <h1>Jason Rahm</h1>
+          <h2>Web Developer</h2>
+          <img src="assets/jason-rahm.jpg" alt="Jason Rahm">
+        </header>
+        <main>
+          <section>
+            <h2>About Me</h2>
+            <div class="container about">
+              <p *ngFor="let x of about">{{ x }}</p>
+            </div>
+          </section>
 
-        <app-skills></app-skills>
-        
-        <section>
-          <h2>Education</h2>
-        </section>
-        
-        <section>
-          <h2>Contact</h2>
-        </section>
-        
-      </main>
+          <app-experience></app-experience>
+
+          <app-skills></app-skills>
+
+          <section>
+            <h2>Education</h2>
+            
+            <mat-card>
+              <mat-card-title>
+                <h3>{{ education.school }}</h3>
+                <p>{{ education.city }} | {{ education.start }} - {{ education.end }}</p>
+              </mat-card-title>
+              <mat-card-content>
+                <ul>
+                  <li>{{ education.degree }}</li>
+                  <li>{{ education.major }}</li>
+                </ul>
+              </mat-card-content>
+            </mat-card>
+            
+          </section>
+
+          <section>
+            <h2>Contact</h2>
+          </section>
+
+        </main>
+      </div>
+      
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
