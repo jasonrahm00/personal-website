@@ -14,8 +14,23 @@
   box-shadow:         3px 0 5px 0 rgba(0, 0, 0, 0.2);
 }
 
+a.mat-list-item {
+  margin: 0 10px;
+  border-radius: 2px;
+}
+
+a.mat-list-item:hover {
+  background: #0053b3;
+}
+
 .mat-nav-list {
   padding-top: 60px;
+}
+
+.mat-nav-list .mat-icon {
+  margin-right: 10px;
+  position: relative;
+  top: -2px;
 }
 
 .sidenav-container {

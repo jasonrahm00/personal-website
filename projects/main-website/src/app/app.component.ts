@@ -42,5 +42,33 @@ export class AppComponent implements OnDestroy {
       this.about = data.about;
     });
   }
+  
+  /*
+    https://github.com/iamdustan/smoothscroll/issues/47
+    
+    let item = // what we want to scroll to
+    let wrapper = // the wrapper we will scroll inside
+    let count = item.offsetTop - wrapper.scrollTop - xx // xx = any extra distance from top ex. 60
+    wrapper.scrollBy({top: count, left: 0, behavior: 'smooth'})
+    
+    http://forums.devshed.com/javascript-development-115/offset-scrollintoview-amount-pixels-535180.html
+    https://stackoverflow.com/questions/45446912/angular-4-scroll-element-offset-top-value
+    https://www.reddit.com/r/Angular2/comments/7gw76o/how_to_scroll_to_top_of_the_page/
+    
+    get viewport location of target and scroll to that with offset
+      viewport location should help with scrollspy
+    
+  */
+  
+  // Scroll
+    // https://stackoverflow.com/questions/43945548/scroll-to-element-on-click-in-angular-4
+    // Offset top on with scroll-to
+    // Track position of div and if matches id of nav, activate nav link for scrollspy?
+  
+  
+
+  scroll(el) {
+    el.scrollIntoView({behavior: 'smooth', block: 'start'});
+  }
 
 }

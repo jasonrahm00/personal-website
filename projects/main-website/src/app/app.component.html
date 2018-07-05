@@ -6,11 +6,14 @@
                  (opened)="navOpen = true"
                  (closed)="navOpen = false">
       <mat-nav-list>
-        <a mat-list-item>About</a>
-        <a mat-list-item>Experience</a>
-        <a mat-list-item>Skills</a>
-        <a mat-list-item>Education</a>
-        <a mat-list-item>Contact</a>
+        <!-- https://stackoverflow.com/questions/48569835/angular-and-scroll-to-top-when-redirect -->
+        <!-- scroll to top method? -->
+        <a mat-list-item (click)="scroll(home)"><mat-icon>home</mat-icon>Home</a>
+        <a mat-list-item (click)="scroll(aboutMe)"><mat-icon>person</mat-icon>About</a>
+        <a mat-list-item (click)="scroll(exp)"><mat-icon>work</mat-icon>Experience</a>
+        <a mat-list-item (click)="scroll(skills)"><mat-icon>code</mat-icon>Skills</a>
+        <a mat-list-item (click)="scroll(ed)"><mat-icon>school</mat-icon>Education</a>
+        <a mat-list-item (click)="scroll(contact)"><mat-icon>email</mat-icon>Contact</a>
       </mat-nav-list>
     </mat-sidenav>
 
@@ -24,25 +27,33 @@
         <span class="app-name">Jason Rahm</span>
       </mat-toolbar>
       
-      <div class="main-content-wrapper">
-        <header class="container site-header">
+      <div id="scrollable" class="main-content-wrapper">
+        <header class="container site-header" #home>
           <h1>Jason Rahm</h1>
           <h2>Web Developer</h2>
           <img src="assets/jason-rahm.jpg" alt="Jason Rahm">
         </header>
+        
         <main>
-          <section>
+          
+          <section #aboutMe>
             <h2>About Me</h2>
             <div class="container about">
               <p *ngFor="let x of about">{{ x }}</p>
             </div>
           </section>
 
-          <app-experience></app-experience>
+          <div #exp>
+            <app-experience></app-experience>
+          </div>
+          
+          <div #skills>
+            <app-skills></app-skills>
+          </div>
 
-          <app-skills></app-skills>
+          
 
-          <section>
+          <section #ed>
             <h2>Education</h2>
             
             <mat-card>
@@ -60,11 +71,12 @@
             
           </section>
 
-          <section>
+          <section #contact>
             <h2>Contact</h2>
           </section>
 
         </main>
+        
       </div>
       
     </mat-sidenav-content>
