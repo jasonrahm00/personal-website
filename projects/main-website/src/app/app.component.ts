@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { Title } from '@angular/platform-browser';
 
@@ -10,6 +10,8 @@ import { GetDataService } from './get-data.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnDestroy {
+  
+  @ViewChild('sideNav') sidenav;
   
   title = 'Jason Rahm';  
   navOpen: boolean;
@@ -64,11 +66,15 @@ export class AppComponent implements OnDestroy {
     // https://stackoverflow.com/questions/43945548/scroll-to-element-on-click-in-angular-4
     // Offset top on with scroll-to
     // Track position of div and if matches id of nav, activate nav link for scrollspy?
-  
-  
 
   scroll(el) {
-    el.scrollIntoView({behavior: 'smooth', block: 'start'});
+    if (this.mobileQuery.matches) {
+      el.scrollIntoView({block: 'start'});
+      this.sidenav.toggle();
+    } else {
+      el.scrollIntoView({behavior: 'smooth', block: 'start'});
+    }
+    
   }
 
 }

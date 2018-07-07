@@ -18,7 +18,7 @@ h2 {
   font-weight: normal;
   line-height: 3.212rem;
   margin: 0 0 60px 0;
-  padding: 30px;
+  padding: 30px 30px 30px 65px;
   text-transform: uppercase;
 }
 
@@ -54,7 +54,7 @@ noscript {
 
 .main-content-wrapper {
   background: whitesmoke;
-  padding-top: 85px;
+  padding-top: 2rem;
 }
 
 .mat-card {
@@ -76,6 +76,10 @@ noscript {
   font-weight: normal;
   line-height: 2.508rem;
   margin: 0;     
+}
+
+.mat-drawer-backdrop.mat-drawer-shown {
+  background-color: rgba(0,0,0,0.6);
 }
 
 a.mat-list-item:hover .mat-list-item-content,

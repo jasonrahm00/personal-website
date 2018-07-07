@@ -12,6 +12,7 @@
   -moz-box-shadow:    3px 0 5px 0 rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 3px 0 5px 0 rgba(0, 0, 0, 0.2);
   box-shadow:         3px 0 5px 0 rgba(0, 0, 0, 0.2);
+  background: #fff;
 }
 
 a.mat-list-item {
@@ -75,4 +76,22 @@ a.mat-list-item:hover {
   margin-bottom: 0;
 }
 
+.menu-trigger {
+  background: #000409;
+  border-radius: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  height: 50px;
+  position: fixed;
+  width: 50px;
+  z-index: 1000;  
+}
+
+.menu-trigger.nav-open {
+  left: 150px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
 

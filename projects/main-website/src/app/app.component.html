@@ -1,10 +1,20 @@
 <div class="wrapper" [class.is-mobile]="mobileQuery.matches">
   <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #sideNav mode="side"
+    <mat-sidenav #sideNav 
+                 [mode]="mobileQuery.matches ? 'over' : 'side'"
                  [fixedInViewport]="mobileQuery.matches" 
                  [opened]="!mobileQuery.matches"
                  (opened)="navOpen = true"
                  (closed)="navOpen = false">
+
+      <button class="menu-trigger nav-open"
+              *ngIf="navOpen"
+              mat-icon-button 
+              (click)="sideNav.toggle()"
+              disableRipple="true">
+        <mat-icon>close</mat-icon>
+      </button>
+      
       <mat-nav-list>
         <!-- https://stackoverflow.com/questions/48569835/angular-and-scroll-to-top-when-redirect -->
         <!-- scroll to top method? -->
@@ -13,25 +23,26 @@
         <a mat-list-item (click)="scroll(exp)"><mat-icon>work</mat-icon>Experience</a>
         <a mat-list-item (click)="scroll(skills)"><mat-icon>code</mat-icon>Skills</a>
         <a mat-list-item (click)="scroll(ed)"><mat-icon>school</mat-icon>Education</a>
-        <a mat-list-item (click)="scroll(contact)"><mat-icon>email</mat-icon>Contact</a>
+<!--        <a mat-list-item (click)="scroll(contact)"><mat-icon>email</mat-icon>Contact</a>-->
       </mat-nav-list>
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <mat-toolbar color="primary" class="toolbar">
-        <button mat-icon-button 
-                (click)="sideNav.toggle()"
-                disableRipple="true">
-          <mat-icon>{{ navOpen ? 'close' : 'menu' }}</mat-icon>
-        </button>
-        <span class="app-name">Jason Rahm</span>
-      </mat-toolbar>
       
-      <div id="scrollable" class="main-content-wrapper">
+      <button class="menu-trigger"
+              *ngIf="!navOpen"
+              mat-icon-button 
+              (click)="sideNav.toggle()"
+              disableRipple="true">
+        <mat-icon>menu</mat-icon>
+      </button>
+      
+      <div class="main-content-wrapper">
         <header class="container site-header" #home>
           <h1>Jason Rahm</h1>
           <h2>Web Developer</h2>
           <img src="assets/jason-rahm.jpg" alt="Jason Rahm">
+
         </header>
         
         <main>
@@ -71,9 +82,11 @@
             
           </section>
 
+<!--
           <section #contact>
             <h2>Contact</h2>
           </section>
+-->
 
         </main>
         
