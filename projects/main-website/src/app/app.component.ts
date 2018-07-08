@@ -16,7 +16,14 @@ export class AppComponent implements OnDestroy {
   title = 'Jason Rahm';  
   navOpen: boolean;
   mobileQuery: MediaQueryList;
-  education = {};
+  education = {
+    "end": null,
+    "start": null,
+    "school": "",
+    "degree": "",
+    "major": "",
+    "city": ""
+  };
   about = [];
 
   private _mobileQueryListener: () => void;
