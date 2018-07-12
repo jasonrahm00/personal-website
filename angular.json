@@ -98,7 +98,7 @@
       }
     }
   },
-  "defaultProject": "angular-apps",
+  "defaultProject": "main-website",
   "schematics": {
     "@schematics/angular:class": {
       "spec": false

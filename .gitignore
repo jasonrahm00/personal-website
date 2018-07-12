@@ -37,18 +37,3 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-
-# Default App Files
-tslint.json
-e2e/
-package-lock.json
-tsconfig.json
-tsconfig.spec.json
-karma.conf.js
-tsconfig.app.json
-browserslist
-polyfills.ts
-test.ts
-environments/
-.editorconfig
-.gitkeep
