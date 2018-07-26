@@ -6,7 +6,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 export class GetDataService {
 
   constructor(private http: HttpClient) { }
-  
+
   getResume() {
     return this.http.get<any>('data/resume-data.json');
   }

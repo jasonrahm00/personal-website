@@ -84,7 +84,7 @@ a.mat-list-item:hover {
   height: 50px;
   position: fixed;
   width: 50px;
-  z-index: 1000;  
+  z-index: 1000;
 }
 
 .menu-trigger.nav-open {

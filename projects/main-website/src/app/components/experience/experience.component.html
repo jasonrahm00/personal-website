@@ -4,7 +4,7 @@
   <mat-card-title>
     <h3>{{ job.employer }}</h3>
     <span class="job-length">
-      {{ job.start.month }}, {{ job.start.year }} - 
+      {{ job.start.month }}, {{ job.start.year }} -
       <span *ngIf="job.end">{{ job.end.month }}, {{ job.end.year}}</span>
       <span *ngIf="!job.end">Present</span>
     </span>
