@@ -1,1 +1,13 @@
 <h2>My Projects</h2>
+
+<mat-card *ngFor="let x of projects">
+  <mat-card-title><h3>{{ x.title }}</h3></mat-card-title>
+  <img mat-card-image src="assets/projects/{{ x.image }}" alt="{{ x.imgAlt }}">
+  <mat-card-content>
+    <p>{{ x.description }}</p>
+  </mat-card-content>
+  <mat-card-actions *ngIf="x.url.length > 0">
+    <a href="{{ x.url }}" *ngIf="x.url.indexOf('jasonrahm') > -1">Visit Page</a>
+    <a href="{{ x.url }}" *ngIf="x.url.indexOf('jasonrahm') < 0" target="_blank">Visit Page</a>
+  </mat-card-actions>
+</mat-card>

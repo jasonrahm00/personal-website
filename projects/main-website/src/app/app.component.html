@@ -20,9 +20,9 @@
         <a mat-list-item (click)="scroll(home)"><mat-icon>home</mat-icon>Home</a>
         <a mat-list-item (click)="scroll(aboutMe)"><mat-icon>person</mat-icon>About</a>
         <a mat-list-item (click)="scroll(exp)"><mat-icon>work</mat-icon>Experience</a>
+        <a mat-list-item (click)="scroll(projects)"><mat-icon>web</mat-icon>Projects</a>
         <a mat-list-item (click)="scroll(skills)"><mat-icon>code</mat-icon>Skills</a>
         <a mat-list-item (click)="scroll(ed)"><mat-icon>school</mat-icon>Education</a>
-<!--        <a mat-list-item (click)="scroll(contact)"><mat-icon>email</mat-icon>Contact</a>-->
       </mat-nav-list>
     </mat-sidenav>
 
@@ -54,6 +54,10 @@
           <app-experience></app-experience>
         </div>
 
+        <div #projects>
+          <app-projects></app-projects>
+        </div>
+
         <div #skills>
           <app-skills></app-skills>
         </div>
@@ -75,12 +79,6 @@
           </mat-card>
 
         </section>
-
-<!--
-        <section #contact>
-          <h2>Contact</h2>
-        </section>
--->
 
       </div>
 

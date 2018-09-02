@@ -1,0 +1,38 @@
+:host {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+h2 {
+  width: 100%;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.mat-card {
+  max-width: 350px;
+  margin: 0 5% 4rem;
+}
+
+.mat-card-content {
+  margin-top: 0;
+}
+
+.mat-card-image {
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.mat-card-title {
+  border-bottom: 0;
+  padding: 0;
+}
+
+.mat-card>.mat-card-actions:last-child {
+  bottom: 0;
+  margin-bottom: 5px;
+  position: absolute;
+}

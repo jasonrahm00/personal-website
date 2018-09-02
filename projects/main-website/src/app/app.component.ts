@@ -46,7 +46,7 @@ export class AppComponent implements OnDestroy {
   ngOnInit() {
     this.titleService.setTitle(this.title);
     this.navOpen = !this.mobileQuery.matches;
-    this.getDataService.getResume().subscribe(data => {
+    this.getDataService.getData('resume').subscribe(data => {
       this.education = data.education;
       this.about = data.about;
     });

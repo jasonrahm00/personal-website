@@ -14,7 +14,7 @@ export class SkillsComponent implements OnInit {
   constructor(private getDataService: GetDataService) { }
 
   ngOnInit() {
-    this.getDataService.getResume().subscribe(data => {
+    this.getDataService.getData('resume').subscribe(data => {
       this.skills = data.skills;
     });
   }
