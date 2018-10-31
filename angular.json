@@ -21,7 +21,8 @@
             "assets": [
               "projects/main-website/src/favicon.ico",
               "projects/main-website/src/assets",
-              "projects/main-website/src/data"
+              "projects/main-website/src/data",
+              "projects/main-website/src/php"
             ],
             "styles": [
               "./node_modules/normalize.css/normalize.css",

@@ -5,28 +5,32 @@
       "image": "budget-app.jpg",
       "imgAlt": "Screenshot of my budget application",
       "description": "This application is built using AngularJS and is something I use every month to create a budget for myself.",
-      "url": "http://jasonrahm.net/budget-app.html"
+      "url": "http://jasonrahm.net/budget-app.html",
+      "code": "https://github.com/jasonrahm00/budget-app"
     },
     {
       "title": "CU College of Nursing",
       "image": "con-homepage.jpg",
       "imgAlt": "Screenshot of the CU College of Nursing Homepage",
       "description": "For my day job, I am the webmaster for the CU College of Nursing. The website is currently built on Sharepoint 2010, and I'm doing what I can to revamp the pages and site architecture to be more modern.",
-      "url": "http://nursing.ucdenver.edu"
+      "url": "http://nursing.ucdenver.edu",
+      "code": ""
     },
     {
       "title": "Faculty Bios",
       "image": "faculty-bio.jpg",
       "imgAlt": "Screenshot of a College of Nursing Faculty Bio page",
       "description": "I redesigned and rebuilt 120 faculty bio pages for the College of Nursing using AngularJS and a Sharepoint list. The list feeds data to the AngularJS app which in turn populates the page. Previously, the pages were individually built and managed with in-page HTML and there were three different \"designs\".",
-      "url": "http://www.ucdenver.edu/academics/colleges/nursing/faculty-staff/faculty/Pages/p_meek.aspx"
+      "url": "http://www.ucdenver.edu/academics/colleges/nursing/faculty-staff/faculty/Pages/p_meek.aspx",
+      "code": "https://github.com/jasonrahm00/con-sp2010/tree/master/dev/faculty-directory/bios"
     },
     {
       "title": "MyCON Intranet",
       "image": "mycon-homepage.jpg",
       "imgAlt": "Screenshot of the CU College of Nursing Intranet homepage",
       "description": "In the summer of 2017, I was tasked with redesigning and rebuilding the CU College of Nursing Intranet. I only had six weeks to complete the project, so I was limited to the platform Central IT provided (Sharepoint 2013). I completed the project in the requested timeframe and have been managing and making improvements ever since.",
-      "url": ""
+      "url": "",
+      "code": ""
     }
   ]
 }

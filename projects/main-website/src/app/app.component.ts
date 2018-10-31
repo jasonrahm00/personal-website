@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Component, OnDestroy, OnInit, ViewChild } from '@ang
 import { MediaMatcher } from '@angular/cdk/layout';
 import { Title } from '@angular/platform-browser';
 
-import { GetDataService } from './get-data.service';
+import { GetDataService } from './services/get-data.service';
 
 @Component({
   selector: 'app-root',

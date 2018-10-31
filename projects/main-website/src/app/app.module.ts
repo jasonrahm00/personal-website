@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { MaterialModule } from './modules/material.module';
 import { SkillsComponent } from './components/skills/skills.component';
-import { GetDataService } from './get-data.service';
+import { GetDataService } from './services/get-data.service';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 
@@ -16,7 +16,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
     AppComponent,
     SkillsComponent,
     ExperienceComponent,
-    ProjectsComponent
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,

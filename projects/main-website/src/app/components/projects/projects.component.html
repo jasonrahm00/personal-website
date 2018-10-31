@@ -7,7 +7,10 @@
     <p>{{ x.description }}</p>
   </mat-card-content>
   <mat-card-actions *ngIf="x.url.length > 0">
+
     <a href="{{ x.url }}" *ngIf="x.url.indexOf('jasonrahm') > -1">Visit Page</a>
-    <a href="{{ x.url }}" *ngIf="x.url.indexOf('jasonrahm') < 0" target="_blank">Visit Page</a>
+    <a href="{{ x.url }}" *ngIf="x.url.indexOf('jasonrahm') < 0" target="_blank" rel="noreferrer">Visit Page</a>
+
+    <a href="{{ x.code }}" *ngIf="x.code.length > 0" target="_blank" rel="noreferrer">View Code</a>
   </mat-card-actions>
 </mat-card>
