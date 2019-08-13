@@ -8,12 +8,12 @@ class Skills extends Component {
   }
 
   componentDidMount() {
-    db.collectionGroup("skills")
+    db.collection("resume")
       .get()
       .then(snapshot => {
         const data = snapshot.docs.map(doc => doc.data());
         this.setState({
-          skills: data
+          skills: data[0].skills
         });
         console.log(this.state.skills);
       });
