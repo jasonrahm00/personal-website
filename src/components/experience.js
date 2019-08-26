@@ -1,30 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import db from '../config/firebase';
-
-class Experience extends Component {
-  state = {
-    experience: null
-  }
-
-  componentDidMount() {
-    db.collection("resume")
-      .get()
-      .then(snapshot => {
-        const data = snapshot.docs.map(doc => doc.data());
-        this.setState({
-          experience: data[0].jobs
-        });
-        console.log(this.state.experience);
-      });
-  }
-
-  render() {
-    return (
+function Experience(props) {
+  return(
+    <section>
       <h2>Experience</h2>
-    )
-  }
-
+    </section>
+  )
 }
 
 export default Experience;

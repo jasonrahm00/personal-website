@@ -1,30 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import db from '../config/firebase';
-
-class Projects extends Component {
-  state = {
-    projects: null
-  }
-
-  componentDidMount() {
-    db.collection("resume")
-      .get()
-      .then(snapshot => {
-        const data = snapshot.docs.map(doc => doc.data());
-        this.setState({
-          projects: data[0].projects
-        });
-        console.log(this.state.projects);
-      });
-  }
-
-  render() {
-    return (
+function Projects(props) {
+  return(
+    <section>
       <h2>Projects</h2>
-    )
-  }
-
+    </section>
+  )
 }
 
 export default Projects;
