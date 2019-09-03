@@ -2,20 +2,20 @@ import React, { Component } from 'react';
 import './App.css';
 import db from './config/firebase';
 
-import About from './components/about';
-import Education from './components/education';
-import Experience from './components/experience';
-import Projects from './components/projects';
-import Skills from './components/skills';
+import About from './components/base/about';
+import Education from './components/base/education';
+import Experience from './components/base/experience';
+import Projects from './components/base/projects';
+import Skills from './components/base/skills';
 
 class App extends Component {
   state = {
     about: '',
-    education: null,
-    experience: null,
-    projects: null,
-    skills: null,
-    qualifications: null
+    education: [],
+    experience: [],
+    projects: [],
+    skills: [],
+    qualifications: []
   }
 
   componentDidMount() {
@@ -27,7 +27,7 @@ class App extends Component {
         this.setState({
           about: data[0].about,
           education: data[0].education,
-          experience: data[0].experience,
+          experience: data[0].jobs,
           projects: data[0].projects,
           skills: data[0].skills,
           qualifications: data[0].qualifications
@@ -39,11 +39,11 @@ class App extends Component {
     return (
       <div>
         <h1>Jason Rahm</h1>
-        <About about={this.state.about}/>
-        <Education />
-        <Experience />
-        <Projects />
-        <Skills />
+        <About about={this.state.about} qualifications={this.state.qualifications}/>
+        <Education education={this.state.education}/>
+        <Experience experience={this.state.experience}/>
+        <Projects projects={this.state.projects}/>
+        <Skills skills={this.state.skills} />
       </div>
     );
   }

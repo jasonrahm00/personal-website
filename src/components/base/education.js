@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Education(props) {
+function Education({education}) {
   return(
     <section>
       <h2>Education</h2>
