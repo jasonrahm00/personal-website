@@ -27,7 +27,7 @@ class App extends Component {
         this.setState({
           about: data[0].about,
           education: data[0].education,
-          experience: data[0].jobs,
+          jobs: data[0].jobs,
           projects: data[0].projects,
           skills: data[0].skills,
           qualifications: data[0].qualifications
@@ -41,7 +41,7 @@ class App extends Component {
         <h1>Jason Rahm</h1>
         <About about={this.state.about} qualifications={this.state.qualifications}/>
         <Education education={this.state.education}/>
-        <Experience experience={this.state.experience}/>
+        <Experience jobs={this.state.jobs}/>
         <Projects projects={this.state.projects}/>
         <Skills skills={this.state.skills} />
       </div>
