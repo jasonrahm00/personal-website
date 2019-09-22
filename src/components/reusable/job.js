@@ -8,22 +8,20 @@ function Job({data}) {
   ) : '';
 
   return(
-    <section className="row">
-      <div className="col s12 m7"> 
-        <div className="card-content">
-          <header>
-            <h3 className="card-title">{data.employer}</h3>
-            <p>
-              {data.start ? Moment(data.start.toDate()).format('MMMM DD, YYYY') : ''}
-              {data.end ? ' - ' + Moment(data.end.toDate()).format('MMMM DD, YYYY') : ' - Present'}
-            </p>
-          </header>
-          <section>
-            <h4>{data.title}</h4>
-            <p>{data.description}</p>
-            {jobDuties.length ? (<ul>{jobDuties}</ul>) : ''}
-          </section>
-        </div>
+    <section className="row card white">
+      <div className="card-content">
+        <header>
+          <h3 className="card-title">{data.employer}</h3>
+          <p>
+            {data.start ? Moment(data.start.toDate()).format('MMMM DD, YYYY') : ''}
+            {data.end ? ' - ' + Moment(data.end.toDate()).format('MMMM DD, YYYY') : ' - Present'}
+          </p>
+        </header>
+        <section>
+          <h4>{data.title}</h4>
+          <p>{data.description}</p>
+          {jobDuties.length ? (<ul className="browser-default">{jobDuties}</ul>) : ''}
+        </section>
       </div>
     </section>
   )

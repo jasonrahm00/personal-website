@@ -7,8 +7,7 @@ function Card({data}) {
     ) : '';
 
   return(
-    <section className="row">
-      <div className="col s12 m7">
+    <section className="card white">
         {
           data.image.url ? (
             <div className="card-image">
@@ -29,7 +28,6 @@ function Card({data}) {
             </div>
           ) : ''
         }
-      </div>
     </section>
   )
 }
