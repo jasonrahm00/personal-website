@@ -1,6 +1,5 @@
 import React from 'react';
-
-import Date from './date';
+import Moment from 'moment';
   
 function Job({data}) {
 
@@ -15,7 +14,8 @@ function Job({data}) {
           <header>
             <h3 className="card-title">{data.employer}</h3>
             <p>
-              {data.start ? (<Date />) : ''}
+              {data.start ? Moment(data.start.toDate()).format('MMMM DD, YYYY') : ''}
+              {data.end ? ' - ' + Moment(data.end.toDate()).format('MMMM DD, YYYY') : ' - Present'}
             </p>
           </header>
           <section>
