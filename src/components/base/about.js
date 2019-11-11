@@ -9,7 +9,7 @@ function About({about, qualifications}) {
   return(
     <section>
       <h2>About</h2>
-      <div className="container">
+      <div>
         <p>{about}</p>
         {qualifications.length ? (<ul className="browser-default">{qualificationList}</ul>) : ''}
       </div>

@@ -7,23 +7,21 @@ function Card({data}) {
     ) : '';
 
   return(
-    <section className="card white">
+    <section>
         {
           data.image.url ? (
-            <div className="card-image">
-              <img src="" alt="missing"/>
-            </div>
+            <img src="" alt="missing"/>
           ) : ''
         }   
-        <div className="card-content">
+        <div>
           <header>
-            {data.title ? (<h3 className="card-title">{data.title}</h3>) : ''}
+            {data.title ? (<h3>{data.title}</h3>) : ''}
           </header>
           {data.description ? (<p>{data.description}</p>) : ''}
         </div>
         {
           cardLinks.length ? (
-            <div className="card-action">
+            <div>
               {cardLinks}
             </div>
           ) : ''

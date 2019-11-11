@@ -6,7 +6,7 @@ function Projects({projects}) {
   return(
     <section>
       <h2>Projects</h2>
-      <div className="container">
+      <div>
           { projects && projects.map((project, index) => {
             return (
               <Card 

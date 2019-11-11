@@ -8,10 +8,9 @@ function Job({data}) {
   ) : '';
 
   return(
-    <section className="row card white">
-      <div className="card-content">
+    <section>
         <header>
-          <h3 className="card-title">{data.employer}</h3>
+          <h3>{data.employer}</h3>
           <p>
             {data.start ? Moment(data.start.toDate()).format('MMMM DD, YYYY') : ''}
             {data.end ? ' - ' + Moment(data.end.toDate()).format('MMMM DD, YYYY') : ' - Present'}
@@ -20,9 +19,8 @@ function Job({data}) {
         <section>
           <h4>{data.title}</h4>
           <p>{data.description}</p>
-          {jobDuties.length ? (<ul className="browser-default">{jobDuties}</ul>) : ''}
+          {jobDuties.length ? (<ul>{jobDuties}</ul>) : ''}
         </section>
-      </div>
     </section>
   )
 }
