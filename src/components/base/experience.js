@@ -2,9 +2,9 @@ import React from 'react';
 
 import Job from '../reusable/job';
 
-function Experience({jobs}) {
+function Experience({jobs, navTarget}) {
   return(
-    <section>
+    <section id={navTarget}>
       <h2>Experience</h2>
       <div>
         { jobs && jobs.map((job, index) => {

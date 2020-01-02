@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Skills(props) {
+function Skills({navTarget}) {
   return(
-    <section>
+    <section id={navTarget}>
       <h2>Skills</h2>
     </section>
   )

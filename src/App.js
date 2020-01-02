@@ -19,7 +19,6 @@ class App extends Component {
   }
 
   componentDidMount() {
-
     db.collection("resume")
       .get()
       .then(snapshot => {
@@ -38,12 +37,30 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Jason Rahm</h1>
-        <About about={this.state.about} qualifications={this.state.qualifications}/>
-        <Education education={this.state.education}/>
-        <Experience jobs={this.state.jobs}/>
-        <Projects projects={this.state.projects}/>
-        <Skills skills={this.state.skills} />
+
+        <nav className="navbar navbar-dark bg-dark navbar-expand fixed-top">
+          <div className="">
+            <ul className="navbar-nav">
+              <li className="nav-item"><a href="#home" className="nav-link">Home</a></li>
+              <li className="nav-item"><a href="#education" className="nav-link">Education</a></li>
+              <li className="nav-item"><a href="#experience" className="nav-link">Experience</a></li>
+              <li className="nav-item"><a href="#projects" className="nav-link">Projects</a></li>
+              <li className="nav-item"><a href="#skills" className="nav-link">Skills</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <main>
+          <div id="home">
+            <h1>Jason Rahm</h1>
+            <About about={this.state.about} qualifications={this.state.qualifications} />
+          </div>
+          <Education navTarget="education" education={this.state.education} />
+          <Experience navTarget="experience" jobs={this.state.jobs} />
+          <Projects navTarget="projects" projects={this.state.projects} />
+          <Skills navTarget="skills" skills={this.state.skills} />
+        </main>
+
       </div>
     );
   }
