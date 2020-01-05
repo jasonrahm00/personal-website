@@ -8,8 +8,8 @@ function Job({data}) {
   ) : '';
 
   return(
-    <section className="row card white">
-      <div className="card-content">
+    <section>
+      <div>
         <header>
           <h3 className="card-title">{data.employer}</h3>
           <p>
@@ -20,7 +20,7 @@ function Job({data}) {
         <section>
           <h4>{data.title}</h4>
           <p>{data.description}</p>
-          {jobDuties.length ? (<ul className="browser-default">{jobDuties}</ul>) : ''}
+          {jobDuties.length ? (<ul>{jobDuties}</ul>) : ''}
         </section>
       </div>
     </section>

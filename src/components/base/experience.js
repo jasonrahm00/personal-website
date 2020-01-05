@@ -6,7 +6,7 @@ function Experience({jobs}) {
   return(
     <section>
       <h2>Experience</h2>
-      <div className="container">
+      <div>
         { jobs && jobs.map((job, index) => {
           return (
             <Job 
