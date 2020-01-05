@@ -6,16 +6,14 @@ function Experience({jobs, navTarget}) {
   return(
     <section id={navTarget}>
       <h2>Experience</h2>
-      <div>
-        { jobs && jobs.map((job, index) => {
-          return (
-            <Job 
-              key={index} 
-              data={job}
-            />
-          )
-        })}
-      </div>
+      { jobs && jobs.map((job, index) => {
+        return (
+          <Job 
+            key={index} 
+            data={job}
+          />
+        )
+      })}
       
     </section>
   )

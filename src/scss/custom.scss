@@ -1,4 +1,18 @@
 @import 'theme.scss';
 
-// Import Bootstrap and its default variables
-@import '~bootstrap/scss/bootstrap.scss';
+// Required Bootstrap Modules
+@import ".~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Additional Base Bootstrap Modules 
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/utilities";
+
+// Bootstrap Modules Utilized by App
+@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/card";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/nav";
