@@ -1,13 +1,6 @@
 nav ul {
   background: var(--primary);
   padding: .5rem;
-  .nav-item {
-    border-bottom: 2px solid var(--primary);
-    &.active,
-    &:hover {
-      border-bottom-color: var(--white);
-    }
-  }
   a {
     color: var(--white);
     &:hover {

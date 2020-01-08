@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import db from './config/firebase';
-import Scrollspy from 'react-scrollspy';
 
 import About from './components/base/about';
 import Education from './components/base/education';
@@ -43,21 +42,17 @@ class App extends Component {
     return (
       <div>
         <nav className="fixed-top">
-            <Scrollspy
-              className="nav justify-content-center"
-              items={this.state.spyItems}
-              currentClassName="active"
-            >
-              <li className="nav-item"><a href="#home" className="nav-link">Home</a></li>
-              <li className="nav-item"><a href="#experience" className="nav-link">Experience</a></li>
-              <li className="nav-item"><a href="#projects" className="nav-link">Projects</a></li>
-              <li className="nav-item"><a href="#skills" className="nav-link">Skills</a></li>
-              <li className="nav-item"><a href="#education" className="nav-link">Education</a></li>
-            </Scrollspy>
+          <ul className="nav justify-content-center">
+            <li className="nav-item"><a href="#home" className="nav-link">Home</a></li>
+            <li className="nav-item"><a href="#experience" className="nav-link">Experience</a></li>
+            <li className="nav-item"><a href="#projects" className="nav-link">Projects</a></li>
+            <li className="nav-item"><a href="#skills" className="nav-link">Skills</a></li>
+            <li className="nav-item"><a href="#education" className="nav-link">Education</a></li>
+          </ul>
         </nav>
 
         <main>
-          <div id="home">
+          <div id="home" className="anchor">
             <h1>Jason Rahm</h1>
             <About 
               about={this.state.about} 
@@ -65,19 +60,19 @@ class App extends Component {
             />
           </div>
           <Experience 
-            navTarget="experience" 
+            id="experience" 
             jobs={this.state.jobs} 
           />
           <Projects 
-            navTarget="projects" 
+            id="projects" 
             projects={this.state.projects} 
           />
           <Skills 
-            navTarget="skills" 
+            id="skills" 
             skills={this.state.skills} 
           />
           <Education 
-            navTarget="education" 
+            id="education" 
             education={this.state.education} 
           />
         </main>
