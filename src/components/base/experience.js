@@ -15,19 +15,6 @@ function Experience({jobs, id}) {
   }
 
   return(
-<<<<<<< HEAD
-    <section>
-      <h2>Experience</h2>
-      <div>
-        { jobs && jobs.map((job, index) => {
-          return (
-            <Job 
-              key={index} 
-              data={job}
-            />
-          )
-        })}
-=======
     <section id={id} className="bg-light-gray py-5">
       <div className="container">
         <h2>Experience</h2>
@@ -51,7 +38,6 @@ function Experience({jobs, id}) {
             
           })}
         </VerticalTimeline>
->>>>>>> bootstrap-install
       </div>
     </section>
   )

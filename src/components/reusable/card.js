@@ -10,13 +10,7 @@ function Card({data}) {
     <section>
         {
           data.image.url ? (
-<<<<<<< HEAD
-            <div>
-              <img src="" alt=""/>
-            </div>
-=======
             <img src="" alt="missing"/>
->>>>>>> bootstrap-install
           ) : ''
         }   
         <div>
