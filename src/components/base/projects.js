@@ -2,9 +2,9 @@ import React from 'react';
 
 import Card from '../reusable/card';
 
-function Projects({projects}) {
+function Projects({projects, id}) {
   return(
-    <section>
+    <section id={id} className="anchor">
       <h2>Projects</h2>
       <div>
           { projects && projects.map((project, index) => {

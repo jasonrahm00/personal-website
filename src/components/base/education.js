@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Education({education}) {
+function Education({education, id}) {
   return(
-    <section>
+    <section id={id} className="anchor">
       <h2>Education</h2>
     </section>
   )

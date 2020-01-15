@@ -7,19 +7,19 @@ import Education from './components/base/education';
 import Experience from './components/base/experience';
 import Projects from './components/base/projects';
 import Skills from './components/base/skills';
+import MainNav from './components/base/mainNav';
 
 class App extends Component {
   state = {
     about: '',
     education: [],
-    experience: [],
+    jobs: [],
     projects: [],
     skills: [],
     qualifications: []
   }
 
   componentDidMount() {
-
     db.collection("resume")
       .get()
       .then(snapshot => {
@@ -38,12 +38,35 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Jason Rahm</h1>
-        <About about={this.state.about} qualifications={this.state.qualifications}/>
-        <Education education={this.state.education}/>
-        <Experience jobs={this.state.jobs}/>
-        <Projects projects={this.state.projects}/>
-        <Skills skills={this.state.skills} />
+        <main>
+        <Experience 
+            id="experience" 
+            jobs={this.state.jobs} 
+          />
+          
+          {/* <div id="home" className="anchor">
+            <h1>Jason Rahm</h1>
+            <About 
+              about={this.state.about} 
+              qualifications={this.state.qualifications} 
+            />
+          </div>
+          <Projects 
+            id="projects" 
+            projects={this.state.projects} 
+          />
+          <Skills 
+            id="skills" 
+            skills={this.state.skills} 
+          />
+          <Education 
+            id="education" 
+            education={this.state.education} 
+          /> */}
+        </main>
+
+        <MainNav />
+
       </div>
     );
   }

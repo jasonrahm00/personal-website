@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Skills(props) {
+function Skills({id}) {
   return(
-    <section>
+    <section id={id} className="anchor">
       <h2>Skills</h2>
     </section>
   )

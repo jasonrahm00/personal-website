@@ -1,0 +1,15 @@
+.vertical-timeline-element-icon {
+  color: $white;
+  background: $primary;
+  .svg-inline--fa.fa-w-14 {
+    width: 24px;
+  }
+}
+
+.vertical-timeline-element-content {
+  color: $black;
+}
+
+.vertical-timeline-element-content-arrow {
+  border-right: 7px solid $white;
+}

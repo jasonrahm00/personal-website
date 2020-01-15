@@ -1,0 +1,11 @@
+nav {
+  background: $white;
+  border-top: 1px solid $light-gray;
+  padding: .5rem;
+  a {
+    color: $dark-gray;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
