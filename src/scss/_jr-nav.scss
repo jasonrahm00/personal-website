@@ -1,10 +1,11 @@
-nav ul {
-  background: var(--primary);
+nav {
+  background: $white;
+  border-top: 1px solid $light-gray;
   padding: .5rem;
   a {
-    color: var(--white);
+    color: $dark-gray;
     &:hover {
-      color: var(--white);
+      color: $primary;
     }
   }
 }
