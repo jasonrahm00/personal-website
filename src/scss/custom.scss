@@ -18,6 +18,7 @@ $colors: map-remove($colors, "indigo", "purple", "pink", "red", "orange", "yello
 @import "~bootstrap/scss/utilities";
 
 // Bootstrap Modules Utilized by App
+@import "~bootstrap/scss/badge";
 @import "~bootstrap/scss/buttons";
 @import "~bootstrap/scss/card";
 @import "~bootstrap/scss/grid";
