@@ -42,7 +42,7 @@ function Experience({jobs, id}) {
                     }
                   </section>
                   <section>
-                    <h4 className="sr-only">Description</h4>
+                    <h4 className="sr-only">Job Description</h4>
                     {
                       job.description && job.description.length ? 
                       (job.description.map((data, index) => <p key={index}>{data}</p>)) :

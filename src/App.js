@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import './App.css';
 import db from './config/firebase';
 
-import About from './components/base/about';
-import Education from './components/base/education';
-import Experience from './components/base/experience';
-import Projects from './components/base/projects';
-import Skills from './components/base/skills';
-import MainNav from './components/base/mainNav';
+import About from './components/about';
+import Education from './components/education';
+import Experience from './components/experience';
+import Projects from './components/projects';
+import Skills from './components/skills';
+import MainNav from './components/mainNav';
 
 class App extends Component {
   state = {
@@ -15,8 +14,7 @@ class App extends Component {
     education: [],
     jobs: [],
     projects: [],
-    skills: [],
-    qualifications: []
+    skills: []
   }
 
   componentDidMount() {
@@ -29,45 +27,43 @@ class App extends Component {
           education: data[0].education,
           jobs: data[0].jobs,
           projects: data[0].projects,
-          skills: data[0].skills,
-          qualifications: data[0].qualifications
+          skills: data[0].skills
         });
       });
   }
 
   render() {
     return (
-      <div>
-        <main>
-        <Experience 
+      <>
+        <MainNav />
+        <main className="mt-5">
+          <About 
+            id="about"
+            about={this.state.about}
+          />
+          <Experience 
             id="experience" 
             jobs={this.state.jobs} 
           />
-          
-          {/* <div id="home" className="anchor">
-            <h1>Jason Rahm</h1>
-            <About 
-              about={this.state.about} 
-              qualifications={this.state.qualifications} 
+            
+            {/* 
+            <Projects 
+              id="projects" 
+              projects={this.state.projects} 
             />
-          </div>
-          <Projects 
-            id="projects" 
-            projects={this.state.projects} 
-          />
-          <Skills 
-            id="skills" 
-            skills={this.state.skills} 
-          />
-          <Education 
-            id="education" 
-            education={this.state.education} 
-          /> */}
+            <Skills 
+              id="skills" 
+              skills={this.state.skills} 
+            />
+            <Education 
+              id="education" 
+              education={this.state.education} 
+            /> */}
         </main>
 
-        <MainNav />
+        
 
-      </div>
+      </>
     );
   }
 
