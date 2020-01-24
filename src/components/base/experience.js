@@ -14,11 +14,6 @@ function Experience({jobs, id}) {
     return dateString;
   }
 
-  function formatTech(x) {
-    let tech = x.sort();
-    return tech.map((data, index) => <li key={index} className="badge badge-secondary mr-2">{data}</li>);
-  }
-
   return(
     <section id={id} className="bg-light-gray py-5">
       <div className="container">
@@ -37,15 +32,17 @@ function Experience({jobs, id}) {
                     <h4 className="vertical-timeline-element-subtitle">{job.employer}</h4>                    
                   </header>
                   <section>
-                    <h3 className="sr-only">Technology Used</h3>
+                    <h4 className="sr-only">Technology Used</h4>
                     {
                       job.technology && job.technology.length ? 
-                      (<ul className="list-unstyled mt-3">{formatTech(job.technology)}</ul>) : 
+                      (<ul className="list-unstyled mt-3">
+                        {job.technology.sort().map((data, index) => <li key={index} className="badge badge-light-gray p-2 my-1 mr-2">{data}</li>)}
+                      </ul>) : 
                       ''
                     }
                   </section>
                   <section>
-                    <h3 className="sr-only">Description</h3>
+                    <h4 className="sr-only">Description</h4>
                     {
                       job.description && job.description.length ? 
                       (job.description.map((data, index) => <p key={index}>{data}</p>)) :
