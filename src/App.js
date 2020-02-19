@@ -10,7 +10,7 @@ import MainNav from './components/mainNav';
 
 class App extends Component {
   state = {
-    about: '',
+    about: {},
     education: [],
     jobs: [],
     projects: [],
