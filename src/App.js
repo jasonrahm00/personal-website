@@ -44,13 +44,12 @@ class App extends Component {
           <Experience 
             id="experience" 
             jobs={this.state.jobs} 
+          /> 
+          <Projects 
+            id="projects" 
+            projects={this.state.projects} 
           />
-            
             {/* 
-            <Projects 
-              id="projects" 
-              projects={this.state.projects} 
-            />
             <Skills 
               id="skills" 
               skills={this.state.skills} 
@@ -60,9 +59,6 @@ class App extends Component {
               education={this.state.education} 
             /> */}
         </main>
-
-        
-
       </>
     );
   }

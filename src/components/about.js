@@ -24,7 +24,7 @@ function About({about, id}) {
                 {about.social.map((data, index) => {
                   return (
                     <li key={index}>
-                      <a href={data.url} className="text-white mr-3" target="_blank" title={data.channel}>
+                      <a href={data.url} className="text-white mr-3" target="_blank" title={data.channel} rel="noreferrer">
                         <span aria-hidden="true">{icons[data.channel.toLowerCase()]}</span>
                         <span className="sr-only">{data.channel}</span>
                       </a>
