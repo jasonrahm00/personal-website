@@ -49,11 +49,12 @@ class App extends Component {
             id="projects" 
             projects={this.state.projects} 
           />
+          <Skills 
+            id="skills" 
+            skills={this.state.skills} 
+          />
             {/* 
-            <Skills 
-              id="skills" 
-              skills={this.state.skills} 
-            />
+            
             <Education 
               id="education" 
               education={this.state.education} 
