@@ -4,6 +4,7 @@ nav {
   padding: .5rem;
   a {
     color: $dark-gray;
+    &.active,
     &:hover {
       color: $primary;
     }

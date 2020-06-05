@@ -12,7 +12,7 @@ function About({about, id}) {
   };
 
   return(
-    <div id={id} className="bg-primary text-white py-5">
+    <section id={id} className="bg-primary text-white py-5">
       <div className="container">
         <div className="row">
           <header className="col-12 col-md-8 pr-4">
@@ -40,7 +40,7 @@ function About({about, id}) {
           </div>
         </div>
       </div>      
-    </div>    
+    </section>    
   )
 }
 
