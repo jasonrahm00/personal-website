@@ -5,6 +5,7 @@ import About from './components/about';
 import Experience from './components/experience';
 import Skills from './components/skills';
 import MainNav from './components/mainNav';
+import MainFooter from './components/mainFooter';
 
 class App extends Component {
   state = {
@@ -38,7 +39,7 @@ class App extends Component {
             about={this.state.about}
           />
           <Experience 
-            id="experience" 
+            id="exp" 
             jobs={this.state.jobs} 
           /> 
           <Skills 
@@ -46,6 +47,7 @@ class App extends Component {
             skills={this.state.skills} 
           />
         </main>
+        <MainFooter />
       </>
     );
   }

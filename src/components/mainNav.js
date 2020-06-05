@@ -1,4 +1,27 @@
 import React from 'react';
+import Scroll from 'react-scroll';
+
+let Link = Scroll.Link;
+
+// Use react-scroll and reference example site source files
+
+const navLinks = [
+  {
+    label: 'Home',
+    target: 'about',
+    icon: ''
+  },
+  {
+    label: 'Experience',
+    target: 'exp',
+    icon: ''
+  },
+  {
+    label: 'Skills',
+    target: 'skills',
+    icon: ''
+  },
+]
 
 function MainNav() {
 
@@ -6,9 +29,23 @@ function MainNav() {
     <nav className="fixed-top">
       <div className="container">
         <ul className="nav justify-content-between">
-          <li className="nav-item"><a href="#about" className="nav-link">Home</a></li>
-          <li className="nav-item"><a href="#experience" className="nav-link">Experience</a></li>
-          <li className="nav-item"><a href="#skills" className="nav-link">Skills</a></li>
+          {navLinks.map((link, i) => {
+            return (
+              <li className="nav-item" key={i}>
+                <Link 
+                  to={link.target} 
+                  className="nav-link"
+                  spy={true}
+                  smooth={true}
+                  activeClass="active"
+                  duation={500}
+                  offset={-50}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            )
+          })}
         </ul>
       </div>
     </nav>
