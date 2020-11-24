@@ -1,13 +1,9 @@
 nav {
-  background: $white;
-  border-bottom: 1px solid $light-gray;
-  padding: .5rem;
-  a {
-    color: $dark-gray;
-    cursor: pointer;
-    &.active,
+  width: 200px;
+  .navbar-nav a {
     &:hover {
-      color: $primary;
+      background: $primary;
+      border-radius: 4px;
     }
-  }
+  }  
 }

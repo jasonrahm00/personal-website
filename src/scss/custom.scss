@@ -1,15 +1,14 @@
-@import 'jr-theme.scss';
-@import 'jr-base.scss';
-@import 'jr-nav.scss';
-@import 'jr-timeline.scss';
-@import 'jr-about.scss';
+//Custon Style Imports
+@import "./jr-theme.scss";
+@import "./jr-nav.scss";
+
 
 // Required Bootstrap Modules
 @import ".~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-$theme-colors: map-remove($theme-colors, "success", "warning", "danger", "info", "light", "dark");
+$theme-colors: map-remove($theme-colors, "success", "warning", "danger", "info");
 $colors: map-remove($colors, "indigo", "purple", "pink", "red", "orange", "yellow", "green", "cyan", "gray-dark", "teal");
 
 // Additional Base Bootstrap Modules 
@@ -24,3 +23,4 @@ $colors: map-remove($colors, "indigo", "purple", "pink", "red", "orange", "yello
 @import "~bootstrap/scss/card";
 @import "~bootstrap/scss/grid";
 @import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
