@@ -1,4 +1,3 @@
-import { faRProject } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faBuilding, faCode, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 

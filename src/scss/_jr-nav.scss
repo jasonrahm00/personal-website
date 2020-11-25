@@ -1,9 +1,18 @@
 nav {
   width: 200px;
   .navbar-nav a {
+    .active-icon {
+      line-height: 1;
+      visibility: hidden;
+    }
+    &.active {
+      .active-icon {
+        visibility: visible;
+      }
+    }
     &:hover {
       background: $primary;
-      border-radius: 4px;
+      text-decoration: none;
     }
   }  
 }

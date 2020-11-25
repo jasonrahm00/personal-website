@@ -8,7 +8,7 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-$theme-colors: map-remove($theme-colors, "success", "warning", "danger", "info");
+$theme-colors: map-remove($theme-colors, "success", "warning", "danger", "info" );
 $colors: map-remove($colors, "indigo", "purple", "pink", "red", "orange", "yellow", "green", "cyan", "gray-dark", "teal");
 
 // Additional Base Bootstrap Modules 
