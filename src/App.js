@@ -14,7 +14,7 @@ class App extends Component {
       <div className="d-flex">
         <Router>
           <MainNav />
-          <div>
+          <div className="w-100">
             <main>
               <Switch>
                 <Route path="/" exact component={About} />

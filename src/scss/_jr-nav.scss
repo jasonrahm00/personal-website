@@ -1,5 +1,6 @@
 nav {
-  width: 200px;
+  transition: width 500ms ease;
+
   .navbar-nav a {
     .active-icon {
       line-height: 1;
@@ -13,6 +14,52 @@ nav {
     &:hover {
       background: $primary;
       text-decoration: none;
+      outline: none;
     }
   }  
+
+  button {
+    border: 0;
+    background: transparent;
+    margin-left: .75rem;
+    .bar-1, .bar-2, .bar-3 {
+      width: 18px;
+      height: 2px;
+      background-color: $white;
+      margin: 6px 0;
+      transition: 0.4s;
+      display: block;
+    }
+  }
+
+  .nav-text {
+    transition: all 200ms;
+  }
+
+  &.open {
+    width: 200px;
+    .nav-text {
+      opacity: 1;
+      padding-left: 1rem;
+      width: auto;
+    }
+    .bar-1 {
+      transform: rotate(-45deg) translate(-5px, 4px);
+    }
+    .bar-2 {
+      opacity: 0;
+    }
+    .bar-3 {
+      transform: rotate(45deg) translate(-7px, -6px);
+    }
+  } 
+
+  &.closed {
+    width: 78px;
+    .nav-text {
+      opacity: 0;
+      padding-left: 0;
+      width: 0;
+    }
+  }
 }

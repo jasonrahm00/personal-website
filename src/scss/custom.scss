@@ -1,5 +1,6 @@
 //Custon Style Imports
 @import "./jr-theme.scss";
+@import "./jr-base.scss";
 @import "./jr-nav.scss";
 
 
@@ -19,7 +20,6 @@ $colors: map-remove($colors, "indigo", "purple", "pink", "red", "orange", "yello
 
 // Bootstrap Modules Utilized by App
 @import "~bootstrap/scss/badge";
-@import "~bootstrap/scss/buttons";
 @import "~bootstrap/scss/card";
 @import "~bootstrap/scss/grid";
 @import "~bootstrap/scss/nav";

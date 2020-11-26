@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { NavData } from './navData';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 function MainNav() {
+
+  const [navbar, setNavbar] = useState(false);
+  const showNav = () => setNavbar(!navbar);
+  const menuButtonLabel = navbar ? 'Close Menu' : 'Open Menu';
+
   return (
-    <nav className="navbar bg-black d-block vh-100 mr-5 p-0">
-      <button className="mx-3" aria-label="Close Menu" title="Close Menu">X</button>
+    <nav className={"navbar bg-black d-block vh-100 mr-5 px-0 pb-0 pt-3" + (navbar ? ' open' : ' closed')}>
+      <button aria-label={menuButtonLabel} title={menuButtonLabel} onClick={showNav}>
+        <span className="bar-1" aria-hidden="true"></span>
+        <span className="bar-2" aria-hidden="true"></span>
+        <span className="bar-3" aria-hidden="true"></span>
+      </button>
       <ul className="navbar-nav">
         {NavData && NavData.map((item, index) => {
           return (
@@ -18,7 +27,7 @@ function MainNav() {
                 aria-label={item.title}
                 title={item.title}>
                 <span>{item.icon}</span>
-                <span className="pl-3" aria-hidden="true">{item.title}</span>
+                <span className="nav-text" aria-hidden="true">{item.title}</span>
                 <span aria-hidden="true" className="active-icon pl-3"><FontAwesomeIcon icon={faChevronRight} /></span>
               </NavLink>
             </li>
