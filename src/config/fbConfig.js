@@ -1,6 +1,3 @@
-import firebase from 'firebase/app';
-import 'firebase/firestore';
-
 // Your web app's Firebase configuration
 /*
 const firebaseProdConfig = {
@@ -24,9 +21,4 @@ const firebaseDevConfig = {
   appId: process.env.REACT_APP_FIRESTORE_DEV_APP_ID
 };
 
-// Initialize Firebase
-firebase.initializeApp(firebaseDevConfig);
-
-const db = firebase.firestore();
-
-export default db;
+export const fbConfig = firebaseDevConfig;
