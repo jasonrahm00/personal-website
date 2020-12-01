@@ -26,7 +26,7 @@ function MainNav() {
                 to={item.path}
                 aria-label={item.title}
                 title={item.title}>
-                <span>{item.icon}</span>
+                <span aria-hidden="true">{item.icon}</span>
                 <span className="nav-text" aria-hidden="true">{item.title}</span>
                 <span aria-hidden="true" className="active-icon pl-3"><FontAwesomeIcon icon={faChevronRight} /></span>
               </NavLink>
