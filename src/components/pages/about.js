@@ -1,21 +1,34 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useFirestoreConnect } from 'react-redux-firebase'; 
+import { useFirestoreConnect, isLoaded } from 'react-redux-firebase'; 
 
 import headshot from '../../assets/jason-rahm.jpg';
+import Loading from '../base/loading';
 
-function About({content}) {
+function About() {
 
-  useFirestoreConnect(['about']);
-  const about = useSelector(state => state.firestore.data.about);
+  useFirestoreConnect([{collection: 'about', doc: 'about'}]);
+  const about = useSelector(
+    ({ firestore: { data } }) => data.about && data.about['about']
+  );
 
   return(
     <>
       <h1>About</h1>
-      { about ? (
-        <p>Loaded</p>
+      <img src={headshot} alt="Jason Rahm" />
+      {isLoaded(about) ? (
+        <>
+          <p>{about.description}</p>
+          <ul>
+            {about.social && about.social.map((entry, id) => (
+              <li key={id}>
+                <span>{entry.channel}</span>
+              </li>
+            ))}
+          </ul>
+        </>
       ) : (
-        <p>Loading</p>
+        <Loading />
       )}
     </>  
   )

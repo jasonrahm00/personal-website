@@ -1,27 +1,40 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useFirestoreConnect } from 'react-redux-firebase'; 
-import Moment from 'moment';
+import { useFirestoreConnect, isLoaded } from 'react-redux-firebase'; 
+
+import Date from '../base/date';
+import Loading from '../base/loading';
 
 function Experience() {
 
-  useFirestoreConnect(['jobs']);
-  const jobs = useSelector(state => state.firestore.data.jobs);
+  useFirestoreConnect(['experience']);
+  const data = useSelector(state => state.firestore.data.experience);
 
-  // function formatDate(start, end) {
-  //   let dateString = '';
-  //   dateString = start ? Moment(start.toDate()).format('MMMM DD, YYYY') : '';
-  //   dateString += end ? ' - ' + Moment(end.toDate()).format('MMMM DD, YYYY') : ' - Present';
-  //   return dateString;
-  // }
+  //TODO:
+    //access skills from store to populate skills list for each job
+    //sort by start date
 
   return(
     <>
       <h1>Experience</h1>
-      { jobs ? (
-        <p>Loaded</p>
+      { isLoaded(data) ? (
+        Object.keys(data).map(key => {
+          let entry = data[key];
+          return (
+            <section className="card" key={key}>
+              <img src="" alt="" className="card-img-top"/>
+              <div className="card-body">
+                <header>
+                  <h2 className="card-title">{entry.employer}</h2>
+                  <h3 className="card-subtitle">{entry.title}</h3>
+                </header>
+                {entry.description && entry.description.map(paragraph => <p>{paragraph}</p>)}
+              </div>
+            </section>
+          )
+        })
       ) : (
-        <p>Loading</p>
+        <Loading />
       )}
     </>
   )

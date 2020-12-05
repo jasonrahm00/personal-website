@@ -1,27 +1,34 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useFirestoreConnect } from 'react-redux-firebase'; 
-import Moment from 'moment';
+import { useFirestoreConnect, isLoaded } from 'react-redux-firebase';
+
+import Loading from '../base/loading';
 
 function Education() {
 
   useFirestoreConnect(['education']);
-  const education = useSelector(state => state.firestore.data.education);
-
-  // function formatDate(start, end) {
-  //   let dateString = '';
-  //   dateString = start ? Moment(start.toDate()).format('MMMM DD, YYYY') : '';
-  //   dateString += end ? ' - ' + Moment(end.toDate()).format('MMMM DD, YYYY') : ' - Present';
-  //   return dateString;
-  // }
+  const data = useSelector(state => state.firestore.data.education);
 
   return(
     <>
       <h1>Education</h1>
-      { education ? (
-        <p>Loaded</p>
+      { isLoaded(data) ? (
+        Object.keys(data).map(key => {
+          let entry = data[key];
+          return (
+            <section className="card" key={key}>
+              <img src="" alt="" className="card-img-top"/>
+              <div className="card-body">
+                <header>
+                  <h2 className="card-title">{entry.school}</h2>
+                  <h3 className="card-subtitle">{entry.degree} - {entry.major}</h3>
+                </header>
+              </div>
+            </section>
+          )
+        })
       ) : (
-        <p>Loading</p>
+        <Loading />
       )}
     </>
   )

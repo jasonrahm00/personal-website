@@ -1,18 +1,27 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useFirestoreConnect } from 'react-redux-firebase'; 
+import { useFirestoreConnect, isLoaded } from 'react-redux-firebase'; 
+
+import Loading from '../base/loading';
 
 function Skills() {
   useFirestoreConnect(['skills']);
-  const skills = useSelector(state => state.firestore.data.skills);
+  const data = useSelector(state => state.firestore.data.skills);
+
+  //TODO
+    //Group be collection before outputting to page
 
   return(
     <>
       <h1>Skills</h1>
-      { skills ? (
-        <p>Loaded</p>
+      {isLoaded(data) ? (
+        <ul>
+          {Object.keys(data).map((key, id) => (
+            <li key={key}>{data[key].title}</li>
+          ))}
+        </ul>
       ) : (
-        <p>Loading</p>
+        <Loading />
       )}
     </>
   )

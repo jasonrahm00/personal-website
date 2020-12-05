@@ -10,6 +10,9 @@ function MainNav() {
   const showNav = () => setNavbar(!navbar);
   const menuButtonLabel = navbar ? 'Close Menu' : 'Open Menu';
 
+  //TODO
+    //Height needs to be updated dynamically when content loads so bg color stretches entire page
+
   return (
     <nav className={"navbar bg-black d-block vh-100 mr-5 px-0 pb-0 pt-3" + (navbar ? ' open' : ' closed')}>
       <button aria-label={menuButtonLabel} title={menuButtonLabel} onClick={showNav}>
