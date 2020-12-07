@@ -1,5 +1,6 @@
 nav {
   transition: width 500ms ease;
+  z-index: 2;
 
   .navbar-nav a {
     .active-icon {
@@ -36,6 +37,10 @@ nav {
     transition: all 200ms;
   }
 
+  & + div {
+    transition: margin 200ms ease;
+  }
+
   &.open {
     width: 200px;
     .nav-text {
@@ -52,6 +57,9 @@ nav {
     .bar-3 {
       transform: rotate(45deg) translate(-7px, -6px);
     }
+    & + div {
+      margin-left: 222px;
+    }
   } 
 
   &.closed {
@@ -60,6 +68,9 @@ nav {
       opacity: 0;
       padding-left: 0;
       width: 0;
+    }
+    & + div {
+      margin-left: 100px;
     }
   }
 }

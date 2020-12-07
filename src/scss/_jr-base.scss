@@ -1,11 +1,15 @@
+$footer-height: 78px;
+
 html {
   overflow-y: scroll;
 }
 
 main {
-  flex: 1 0 auto;
+  min-height: calc(100vh - #{$footer-height});
+  z-index: 1;
 }
 
 footer {
-  flex-shrink: 0;
+  height: $footer-height;
+  z-index: 1;
 }

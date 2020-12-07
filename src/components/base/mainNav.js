@@ -14,7 +14,7 @@ function MainNav() {
     //Height needs to be updated dynamically when content loads so bg color stretches entire page
 
   return (
-    <nav className={"navbar bg-black d-block vh-100 mr-5 px-0 pb-0 pt-3" + (navbar ? ' open' : ' closed')}>
+    <nav className={"bg-black position-fixed pt-4 vh-100" + (navbar ? ' open' : ' closed')}>
       <button aria-label={menuButtonLabel} title={menuButtonLabel} onClick={showNav}>
         <span className="bar-1" aria-hidden="true"></span>
         <span className="bar-2" aria-hidden="true"></span>

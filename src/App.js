@@ -13,7 +13,7 @@ function App() {
     <div className="d-flex">
       <Router>
         <MainNav />
-        <div className="w-100 d-flex flex-column">
+        <div className="w-100">
           <main>
             <Switch>
               <Route path="/" exact component={About} />

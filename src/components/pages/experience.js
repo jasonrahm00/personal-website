@@ -28,7 +28,7 @@ function Experience() {
                   <h2 className="card-title">{entry.employer}</h2>
                   <h3 className="card-subtitle">{entry.title}</h3>
                 </header>
-                {entry.description && entry.description.map(paragraph => <p>{paragraph}</p>)}
+                {entry.description && entry.description.map((paragraph, id) => <p key={id}>{paragraph}</p>)}
               </div>
             </section>
           )
