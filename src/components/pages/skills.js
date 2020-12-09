@@ -1,23 +1,24 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { useFirestoreConnect, isLoaded } from 'react-redux-firebase'; 
+import { compose } from 'redux';
+import { connect } from 'react-redux';
+import { firestoreConnect, isLoaded } from 'react-redux-firebase';
 
 import Loading from '../base/loading';
 
-function Skills() {
-  useFirestoreConnect(['skills']);
-  const data = useSelector(state => state.firestore.data.skills);
+function Skills(props) {
+  
+  const {skills} = props
 
   //TODO
-    //Group be collection before outputting to page
+    //Group by collection before outputting to page
 
   return(
     <>
       <h1>Skills</h1>
-      {isLoaded(data) ? (
+      {isLoaded(skills) ? (
         <ul>
-          {Object.keys(data).map((key, id) => (
-            <li key={key}>{data[key].title}</li>
+          {Object.keys(skills).map((key, id) => (
+            <li key={key}>{skills[key].title}</li>
           ))}
         </ul>
       ) : (
@@ -27,4 +28,11 @@ function Skills() {
   )
 }
 
-export default Skills;
+export default compose(
+  firestoreConnect(() => [{collection: 'skills', orderBy: 'title'}]),
+  connect(state => {
+    return {
+      skills: state.firestore.data.skills
+    }
+  })
+)(Skills);

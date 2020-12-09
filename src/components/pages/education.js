@@ -1,20 +1,21 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { useFirestoreConnect, isLoaded } from 'react-redux-firebase';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
+import { firestoreConnect, isLoaded } from 'react-redux-firebase';
+
 
 import Loading from '../base/loading';
 
-function Education() {
+function Education(props) {
 
-  useFirestoreConnect(['education']);
-  const data = useSelector(state => state.firestore.data.education);
+  const {schools} = props;
 
   return(
     <>
       <h1>Education</h1>
-      { isLoaded(data) ? (
-        Object.keys(data).map(key => {
-          let entry = data[key];
+      { isLoaded(schools) ? (
+        Object.keys(schools).map(key => {
+          let entry = schools[key];
           return (
             <section className="card" key={key}>
               <img src="" alt="" className="card-img-top"/>
@@ -34,4 +35,11 @@ function Education() {
   )
 }
 
-export default Education;
+export default compose(
+  firestoreConnect(() => ['education']),
+  connect(state => {
+    return {
+      schools: state.firestore.data.education
+    }
+  })
+)(Education);

@@ -1,34 +1,34 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { useFirestoreConnect, isLoaded } from 'react-redux-firebase'; 
+import { compose } from 'redux';
+import { connect } from 'react-redux';
+import { firestoreConnect, isLoaded } from 'react-redux-firebase'; 
 
 import Date from '../base/date';
 import Loading from '../base/loading';
 
-function Experience() {
+function Experience(props) {
 
-  useFirestoreConnect(['experience']);
-  const data = useSelector(state => state.firestore.data.experience);
-
-  //TODO:
-    //access skills from store to populate skills list for each job
-    //sort by start date
+  const {jobs, skills} = props;
 
   return(
     <>
       <h1>Experience</h1>
-      { isLoaded(data) ? (
-        Object.keys(data).map(key => {
-          let entry = data[key];
+      { isLoaded(jobs, skills) ? (
+        Object.keys(jobs).map(key => {
+          let job = jobs[key];
           return (
             <section className="card" key={key}>
-              <img src="" alt="" className="card-img-top"/>
               <div className="card-body">
                 <header>
-                  <h2 className="card-title">{entry.employer}</h2>
-                  <h3 className="card-subtitle">{entry.title}</h3>
+                  <h2 className="card-title">{job.employer}</h2>
+                  <h3 className="card-subtitle">{job.title}</h3>
                 </header>
-                {entry.description && entry.description.map((paragraph, id) => <p key={id}>{paragraph}</p>)}
+                {job.description && job.description.map((paragraph, id) => <p key={id}>{paragraph}</p>)}
+                {job.skills && job.skills.length ? (
+                  <ul aria-label="Skills and Technology Used">
+                    {job.skills.map((skill, index) => (<li key={index}>{skills[skill.id].title}</li>))}
+                  </ul>
+                ) : ''}
               </div>
             </section>
           )
@@ -40,4 +40,12 @@ function Experience() {
   )
 }
 
-export default Experience;
+export default compose(
+  firestoreConnect(() => ['experience', {collection: 'skills', orderBy: 'title'}]),
+  connect(state => {
+    return {
+      jobs: state.firestore.data.experience,
+      skills: state.firestore.data.skills
+    }
+  })
+)(Experience);

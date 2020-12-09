@@ -1,16 +1,19 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { useFirestoreConnect, isLoaded } from 'react-redux-firebase'; 
+import { compose } from 'redux';
+import { connect } from 'react-redux';
+import { firestoreConnect, isLoaded } from 'react-redux-firebase';
 
 import headshot from '../../assets/jason-rahm.jpg';
 import Loading from '../base/loading';
 
-function About() {
+function About(props) {
 
-  useFirestoreConnect([{collection: 'about', doc: 'about'}]);
-  const about = useSelector(
-    ({ firestore: { data } }) => data.about && data.about['about']
-  );
+  const {about} = props;
+
+  // useFirestoreConnect([{collection: 'about', doc: 'about'}]);
+  // const about = useSelector(
+  //   ({ firestore: { data } }) => data.about && data.about['about']
+  // );
 
   return(
     <>
@@ -18,9 +21,9 @@ function About() {
       <img src={headshot} alt="Jason Rahm" />
       {isLoaded(about) ? (
         <>
-          <p>{about.description}</p>
-          <ul>
-            {about.social && about.social.map((entry, id) => (
+          <p>{about.about.description}</p>
+          <ul aria-label="Social Channels">
+            {about.about.social && about.about.social.map((entry, id) => (
               <li key={id}>
                 <span>{entry.channel}</span>
               </li>
@@ -34,4 +37,11 @@ function About() {
   )
 }
 
-export default About;
+export default compose(
+  firestoreConnect(() => [{collection: 'about', doc: 'about'}]),
+  connect(state => {
+    return {
+      about: state.firestore.data.about
+    }
+  })
+)(About);
