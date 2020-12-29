@@ -3,7 +3,6 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { firestoreConnect, isLoaded } from 'react-redux-firebase';
 
-import headshot from '../../assets/jason-rahm.jpg';
 import Loading from '../base/loading';
 
 function About(props) {
@@ -18,9 +17,9 @@ function About(props) {
   return(
     <>
       <h1>About</h1>
-      <img src={headshot} alt="Jason Rahm" />
       {isLoaded(about) ? (
         <>
+          <img src={about.about.headshot} alt="Jason Rahm" />
           <p>{about.about.description}</p>
           <ul aria-label="Social Channels">
             {about.about.social && about.about.social.map((entry, id) => (
