@@ -16,6 +16,9 @@ function Experience(props) {
       { isLoaded(jobs, skills) ? (
         Object.keys(jobs).map(key => {
           let job = jobs[key];
+          let jobSkills = job.skills.map(skill => {
+            return {...skills[skill.id], id: skill.id};
+          });
           return (
             <section className="card" key={key}>
               <div className="card-body">
@@ -25,8 +28,17 @@ function Experience(props) {
                 </header>
                 {job.description && job.description.map((paragraph, id) => <p key={id}>{paragraph}</p>)}
                 {job.skills && job.skills.length ? (
-                  <ul aria-label="Skills and Technology Used">
-                    {job.skills.map((skill, index) => (<li key={index}>{skills[skill.id].title}</li>))}
+                  <ul aria-label="Skills and Technology Used" className="list-unstyled justify-content-start d-flex flex-wrap">
+                    {jobSkills
+                      .sort((a, b) => a.title > b.title ? 1 : -1)
+                      .map((skill, index) => {
+                        return (
+                          <li className="m-2 skill-item" title={skill.title} key={key + '-' + skill.id}>
+                            <span className="sr-only">{skill.title}</span>
+                            <img aria-hidden="true" src={skill.logo} alt=""/>
+                          </li>
+                        )
+                    })}
                   </ul>
                 ) : ''}
               </div>
@@ -41,7 +53,7 @@ function Experience(props) {
 }
 
 export default compose(
-  firestoreConnect(() => ['experience', {collection: 'skills', orderBy: 'title'}]),
+  firestoreConnect(() => [{collection: 'experience', orderBy: ['start', 'desc']}, 'skills']),
   connect(state => {
     return {
       jobs: state.firestore.data.experience,

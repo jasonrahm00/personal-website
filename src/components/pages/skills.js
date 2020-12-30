@@ -29,7 +29,7 @@ function Skills(props) {
 }
 
 export default compose(
-  firestoreConnect(() => [{collection: 'skills', orderBy: 'title'}]),
+  firestoreConnect(() => ['skills']),
   connect(state => {
     return {
       skills: state.firestore.data.skills
