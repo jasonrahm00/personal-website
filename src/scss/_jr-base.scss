@@ -7,9 +7,17 @@ html {
 main {
   min-height: calc(100vh - #{$footer-height});
   z-index: 1;
+  margin-top: 50px;
 }
 
 footer {
   height: $footer-height;
   z-index: 1;
+}
+
+main, footer {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 25px;
 }

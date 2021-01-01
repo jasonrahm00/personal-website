@@ -15,7 +15,7 @@ function MainNav() {
 
   return (
     <nav className={"bg-black position-fixed pt-4 vh-100" + (navbar ? ' open' : ' closed')}>
-      <button aria-label={menuButtonLabel} title={menuButtonLabel} onClick={showNav}>
+      <button className="d-none d-md-block" aria-label={menuButtonLabel} title={menuButtonLabel} onClick={showNav}>
         <span className="bar-1" aria-hidden="true"></span>
         <span className="bar-2" aria-hidden="true"></span>
         <span className="bar-3" aria-hidden="true"></span>
@@ -28,7 +28,7 @@ function MainNav() {
                 exact
                 to={item.path}
                 aria-label={item.title}
-                title={item.title}>
+                title={!navbar ? item.title : ''}>
                 <span aria-hidden="true">{item.icon}</span>
                 <span className="nav-text" aria-hidden="true">{item.title}</span>
                 <span aria-hidden="true" className="active-icon pl-3"><FontAwesomeIcon icon={faChevronRight} /></span>

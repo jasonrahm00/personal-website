@@ -38,7 +38,7 @@ function Skills(props) {
             <section key={id}>
               <h2>{key}</h2>
               <ul>
-                {groupedSkills[key].sort((a, b) => a.title > b.title ? 1 : -1).map(skill => {
+                {groupedSkills[key].sort((a, b) => a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1).map(skill => {
                   return (
                     <li key={id + '-' + skill.id}>{skill.title}</li>
                   )

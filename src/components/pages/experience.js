@@ -30,7 +30,7 @@ function Experience(props) {
                 {job.skills && job.skills.length ? (
                   <ul aria-label="Skills and Technology Used" className="list-unstyled justify-content-start d-flex flex-wrap align-items-center">
                     {jobSkills
-                      .sort((a, b) => a.title > b.title ? 1 : -1)
+                      .sort((a, b) => a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1)
                       .map(skill => {
                         return (
                           <li className="m-2 skill-item" title={skill.title} key={key + '-' + skill.id}>

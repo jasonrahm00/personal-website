@@ -10,10 +10,10 @@ import Education from './components/pages/education';
 
 function App() {
   return (
-    <div className="d-flex">
+    <div className="d-flex bg-black">
       <Router>
         <MainNav />
-        <div className="w-100">
+        <div className="w-100 bg-white">
           <main>
             <Switch>
               <Route path="/" exact component={About} />
