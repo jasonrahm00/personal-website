@@ -28,14 +28,14 @@ function Experience(props) {
                 </header>
                 {job.description && job.description.map((paragraph, id) => <p key={id}>{paragraph}</p>)}
                 {job.skills && job.skills.length ? (
-                  <ul aria-label="Skills and Technology Used" className="list-unstyled justify-content-start d-flex flex-wrap">
+                  <ul aria-label="Skills and Technology Used" className="list-unstyled justify-content-start d-flex flex-wrap align-items-center">
                     {jobSkills
                       .sort((a, b) => a.title > b.title ? 1 : -1)
-                      .map((skill, index) => {
+                      .map(skill => {
                         return (
                           <li className="m-2 skill-item" title={skill.title} key={key + '-' + skill.id}>
                             <span className="sr-only">{skill.title}</span>
-                            <img aria-hidden="true" src={skill.logo} alt=""/>
+                            <img className="w-100" aria-hidden="true" src={skill.logo} alt=""/>
                           </li>
                         )
                     })}
