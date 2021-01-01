@@ -1,23 +1,30 @@
-$footer-height: 78px;
+$footer-height: 56px;
+$top-margin: 100px;
 
 html {
   overflow-y: scroll;
 }
 
 main {
-  min-height: calc(100vh - #{$footer-height});
-  z-index: 1;
-  margin-top: 50px;
+  margin-top: $top-margin;
+  min-height: calc(100vh - #{$footer-height} - #{$top-margin});
+  padding: 0 2rem;
+  @include media-breakpoint-up(lg) {
+    padding: 0;
+  }
 }
 
 footer {
   height: $footer-height;
-  z-index: 1;
+  p {
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+  }
 }
 
-main, footer {
+main, footer>div, nav>ul {
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 25px;
 }
