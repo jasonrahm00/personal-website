@@ -9,6 +9,7 @@ import Loading from '../base/loading';
 function Experience(props) {
 
   const {jobs, skills} = props;
+  const skillHeader = "Skills and Technology Used";
 
   return(
     <>
@@ -20,26 +21,35 @@ function Experience(props) {
             return {...skills[skill.id], id: skill.id};
           });
           return (
-            <section className="card" key={key}>
+            <section className="card w-75 shadow" key={key}>
               <div className="card-body">
-                <header>
+                <header className="border-bottom mb-3 pb-3">
                   <h2 className="card-title">{job.employer}</h2>
                   <h3 className="card-subtitle">{job.title}</h3>
+                  <p className="m-0">
+                    {job.start ? <Date date={job.start} /> : ''} - {job.end ? <Date date={job.end} /> : 'Present'}
+                  </p>
                 </header>
                 {job.description && job.description.map((paragraph, id) => <p key={id}>{paragraph}</p>)}
                 {job.skills && job.skills.length ? (
-                  <ul aria-label="Skills and Technology Used" className="list-unstyled justify-content-start d-flex flex-wrap align-items-center">
-                    {jobSkills
-                      .sort((a, b) => a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1)
-                      .map(skill => {
-                        return (
-                          <li className="m-2 skill-item" title={skill.title} key={key + '-' + skill.id}>
-                            <span className="sr-only">{skill.title}</span>
-                            <img className="w-100" aria-hidden="true" src={skill.logo} alt=""/>
-                          </li>
-                        )
-                    })}
-                  </ul>
+                  <section>
+                    <h3 className="h5 text-secondary">
+                      <span>{skillHeader}</span>
+                      <span className="sr-only"> at {job.employer}</span>
+                    </h3>
+                    <ul aria-label={skillHeader + ' at ' + job.employer} className="list-unstyled justify-content-start d-flex flex-wrap align-items-center">
+                      {jobSkills
+                        .sort((a, b) => a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1)
+                        .map(skill => {
+                          return (
+                            <li className="m-2 skill-item" title={skill.title} key={key + '-' + skill.id}>
+                              <span className="sr-only">{skill.title}</span>
+                              <img className="w-100" aria-hidden="true" src={skill.logo} alt=""/>
+                            </li>
+                          )
+                      })}
+                    </ul>
+                  </section>
                 ) : ''}
               </div>
             </section>

@@ -10,21 +10,18 @@ import Education from './components/pages/education';
 
 function App() {
   return (
-    <div className="position-relative">
-      <Router>
-        <MainNav />
-        <main>
-          <Switch>
-            <Route path="/" exact component={About} />
-            <Route path="/experience" component={Experience} />
-            <Route path="/skills" component={Skills} />
-            <Route path="/education" component={Education} />
-          </Switch>
-        </main>
-        <MainFooter />
-      </Router>
-    </div>
-    
+    <Router>
+      <MainNav />
+      <main>
+        <Switch>
+          <Route path="/" exact component={About} />
+          <Route path="/experience" component={Experience} />
+          <Route path="/skills" component={Skills} />
+          <Route path="/education" component={Education} />
+        </Switch>
+      </main>
+      <MainFooter />
+    </Router>    
   );
 }
 

@@ -28,3 +28,14 @@ main, footer>div, nav>ul {
   margin-left: auto;
   margin-right: auto;
 }
+
+h1 {
+  text-align: center;
+}
+
+.card {
+  margin: 4rem auto;
+  h2, h3 {
+    margin-bottom: 1rem;
+  }
+}

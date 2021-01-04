@@ -17,7 +17,7 @@ function About(props) {
 
   return(
     <>
-      <h1>Hello! I'm Jason Rahm</h1>
+      <h1 className="text-left">Hello! I'm Jason Rahm</h1>
       {isLoaded(about) ? (
         <div className="d-flex justify-content-between flex-wrap">
           <div className="order-lg-2 headshot p-md-0" style={{width: "200px"}}>
