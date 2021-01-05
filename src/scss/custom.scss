@@ -8,6 +8,7 @@
 @import "./jr-base.scss";
 @import "./jr-nav.scss";
 @import "./jr-experience.scss";
+@import "./jr-skills.scss";
 @import "./jr-about.scss";
 
 $theme-colors: map-remove($theme-colors, "success", "warning", "danger", "info" );

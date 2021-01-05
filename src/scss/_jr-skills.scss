@@ -1,0 +1,7 @@
+.skill-group .skill-item {
+  width: 120px;
+  margin: 2rem;
+  @include media-breakpoint-up(xl) {
+    margin: 2rem 4rem;
+  }
+}

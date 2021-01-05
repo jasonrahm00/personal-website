@@ -1,4 +1,5 @@
 $footer-height: 56px;
+$footer-margin: 44px;
 $top-margin: 100px;
 
 html {
@@ -7,15 +8,16 @@ html {
 
 main {
   margin-top: $top-margin;
-  min-height: calc(100vh - #{$footer-height} - #{$top-margin});
+  min-height: calc(100vh - #{$top-margin} - #{$footer-height} - #{$footer-margin});
   padding: 0 2rem;
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(xl) {
     padding: 0;
   }
 }
 
 footer {
   height: $footer-height;
+  margin-top: 44px;
   p {
     margin: 0;
     padding: 1rem 0;
@@ -35,6 +37,13 @@ h1 {
 
 .card {
   margin: 4rem auto;
+  &:first-of-type {
+    margin: 3rem auto 4rem;
+  }
+  width: 100%;
+  @include media-breakpoint-up(lg) {
+    width: 75%;
+  }
   h2, h3 {
     margin-bottom: 1rem;
   }

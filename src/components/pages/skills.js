@@ -23,6 +23,7 @@ function Skills(props) {
         skillGroups[skillOj[objKey].group] = [{...skillOj[objKey], id: objKey}]
       }
     }
+    console.log(skillGroups);
     return skillGroups;
   }
 
@@ -32,19 +33,19 @@ function Skills(props) {
     <>
       <h1>Skills</h1>
       { groupedSkills && groupedSkills !== null ? (
-        Object.keys(groupedSkills).map((key, id) => {
+        Object.keys(groupedSkills).map((group, groupIndex) => {
           return (
-            <section className="card shadow w-75" key={id}>
+            <section className="skill-group card shadow" key={groupIndex}>
               <div className="card-body">
                 <header className="border-bottom mb-3">
-                  <h2>{key}</h2>
+                  <h2>{group}</h2>
                 </header>
-                <ul aria-label={key} className="list-unstyled justify-content-start d-flex flex-wrap align-items-center">
-                  {groupedSkills[key].sort((a, b) => a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1).map(skill => {
+                <ul aria-label={group} className="list-unstyled justify-content-center justify-content-xl-start d-flex flex-wrap align-items-end">
+                  {groupedSkills[group].sort((a, b) => a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1).map(skill => {
                     return (
-                      <li className="m-2 skill-item" title={skill.title} key={key + '-' + skill.id}>
-                        <span className="sr-only">{skill.title}</span>
-                        <img className="w-100" aria-hidden="true" src={skill.logo} alt=""/>
+                      <li className="skill-item" key={groupIndex + '-' + skill.id}>
+                        <img className="w-100 mb-3" aria-hidden="true" src={skill.logo} alt=""/>
+                        <span className="d-block text-center">{skill.title}</span>
                       </li>
                     )
                   })}

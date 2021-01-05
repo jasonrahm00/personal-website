@@ -15,13 +15,13 @@ function Experience(props) {
     <>
       <h1>Experience</h1>
       { isLoaded(jobs, skills) ? (
-        Object.keys(jobs).map(key => {
-          let job = jobs[key];
+        Object.keys(jobs).map(sectionKey => {
+          let job = jobs[sectionKey];
           let jobSkills = job.skills.map(skill => {
             return {...skills[skill.id], id: skill.id};
           });
           return (
-            <section className="card w-75 shadow" key={key}>
+            <section className="job card shadow" key={sectionKey}>
               <div className="card-body">
                 <header className="border-bottom mb-3 pb-3">
                   <h2 className="card-title">{job.employer}</h2>
@@ -42,7 +42,7 @@ function Experience(props) {
                         .sort((a, b) => a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1)
                         .map(skill => {
                           return (
-                            <li className="m-2 skill-item" title={skill.title} key={key + '-' + skill.id}>
+                            <li className="m-2 skill-item" title={skill.title} key={sectionKey + '-' + skill.id}>
                               <span className="sr-only">{skill.title}</span>
                               <img className="w-100" aria-hidden="true" src={skill.logo} alt=""/>
                             </li>

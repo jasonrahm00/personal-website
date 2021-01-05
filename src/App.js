@@ -16,10 +16,18 @@ function App() {
       <main>
         <ScrollToTop />
         <Switch>
-          <Route path="/" exact component={About} />
-          <Route path="/experience" component={Experience} />
-          <Route path="/skills" component={Skills} />
-          <Route path="/education" component={Education} />
+          <Route exact path="/">
+            <About />
+          </Route>
+          <Route path="/experience">
+            <Experience />
+          </Route>
+          <Route path="/skills">
+            <Skills />
+          </Route>
+          <Route path="/education">
+            <Education />
+          </Route>
         </Switch>
       </main>
       <MainFooter />
