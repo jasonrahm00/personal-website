@@ -23,7 +23,6 @@ function Skills(props) {
         skillGroups[skillOj[objKey].group] = [{...skillOj[objKey], id: objKey}]
       }
     }
-    console.log(skillGroups);
     return skillGroups;
   }
 
