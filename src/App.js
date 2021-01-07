@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
 
 import ScrollToTop from './components/base/nav/scrollToTop';
 import About from './components/pages/about';
@@ -8,28 +8,19 @@ import MainFooter from './components/base/mainFooter';
 import MainNav from './components/base/nav/mainNav';
 import Skills from './components/pages/skills';
 import Education from './components/pages/education';
+import MainComponent from './components/base/mainComponent';
 
 function App() {
   return (
     <Router>
       <MainNav />
-      <main>
-        <ScrollToTop />
-        <Switch>
-          <Route exact path="/">
-            <About />
-          </Route>
-          <Route path="/experience">
-            <Experience />
-          </Route>
-          <Route path="/skills">
-            <Skills />
-          </Route>
-          <Route path="/education">
-            <Education />
-          </Route>
-        </Switch>
-      </main>
+      <ScrollToTop />
+      <Switch>
+        <MainComponent exact path="/" component={About}/>
+        <MainComponent path="/experience" component={Experience}/>
+        <MainComponent path="/skills" component={Skills}/>
+        <MainComponent path="/education" component={Education}/>
+      </Switch>
       <MainFooter />
     </Router>    
   );
