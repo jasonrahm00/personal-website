@@ -27,7 +27,7 @@ function Experience(props) {
                   <h2 className="card-title">{job.employer}</h2>
                   <h3 className="card-subtitle">{job.title}</h3>
                   <p className="m-0">
-                    {job.start ? <Date date={job.start} /> : ''} - {job.end ? <Date date={job.end} /> : 'Present'}
+                    {job.start ? <Date date={job.start} format='MMMM YYYY' /> : ''} - {job.end ? <Date date={job.end} format='MMMM YYYY' /> : 'Present'}
                   </p>
                 </header>
                 {job.description && job.description.map((paragraph, id) => <p key={id}>{paragraph}</p>)}
