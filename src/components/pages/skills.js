@@ -41,7 +41,7 @@ function Skills(props) {
                 <ul aria-label={group} className="list-unstyled justify-content-center justify-content-xl-start d-flex flex-wrap align-items-end">
                   {groupedSkills[group].sort((a, b) => a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1).map(skill => {
                     return (
-                      <li className="skill-item" key={groupIndex + '-' + skill.id}>
+                      <li data-skill-id={skill.id} className="skill-item" key={groupIndex + '-' + skill.id}>
                         <img className="w-100 mb-3" aria-hidden="true" src={skill.logo} alt=""/>
                         <span className="d-block text-center">{skill.title}</span>
                       </li>

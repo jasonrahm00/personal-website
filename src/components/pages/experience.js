@@ -41,7 +41,7 @@ function Experience(props) {
                         .sort((a, b) => a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1)
                         .map(skill => {
                           return (
-                            <li className="m-2 skill-item" title={skill.title} key={sectionKey + '-' + skill.id}>
+                            <li data-job-id={sectionKey} data-skill-id={skill.id} className="m-2 skill-item" title={skill.title} key={sectionKey + '-' + skill.id}>
                               <span className="sr-only">{skill.title}</span>
                               <img className="w-100" aria-hidden="true" src={skill.logo} alt=""/>
                             </li>
