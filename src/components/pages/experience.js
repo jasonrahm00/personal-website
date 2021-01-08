@@ -13,7 +13,6 @@ function Experience(props) {
 
   return(
     <>
-      <h1>Experience</h1>
       { isLoaded(jobs, skills) ? (
         Object.keys(jobs).map(sectionKey => {
           let job = jobs[sectionKey];

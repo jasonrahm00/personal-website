@@ -12,7 +12,6 @@ function Education(props) {
 
   return(
     <>
-      <h1>Education</h1>
       { isLoaded(schools) ? (
         Object.keys(schools).map(key => {
           let entry = schools[key];

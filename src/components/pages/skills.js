@@ -30,7 +30,6 @@ function Skills(props) {
 
   return(
     <>
-      <h1>Skills</h1>
       { groupedSkills && groupedSkills !== null ? (
         Object.keys(groupedSkills).map((group, groupIndex) => {
           return (
