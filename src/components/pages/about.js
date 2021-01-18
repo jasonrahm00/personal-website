@@ -27,8 +27,8 @@ function About(props) {
             <ul aria-label="Social Channels" className="list-unstyled d-flex align-self-end">
               {about.about.social && about.about.social.map((entry, id) => (
                 <li className="mr-4" key={id}>
-                  <a href={entry.url} className="text-black" title={entry.channel} target="_blank" rel="noreferrer">
-                    <span className="sr-only">{entry.channel}</span>
+                  <a href={entry.url} className="text-black" title={'My ' + entry.channel} target="_blank" rel="noreferrer">
+                    <span className="sr-only">{'My ' + entry.channel}</span>
                     <span aria-hidden="true">{icons[entry.channel.toLowerCase()]}</span>
                   </a>
                 </li>
