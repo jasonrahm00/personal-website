@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Routes } from 'react-router-dom';
 
 import ScrollToTop from './components/base/nav/scrollToTop';
 import About from './components/pages/about';
@@ -15,12 +15,12 @@ function App() {
     <Router>
       <MainNav />
       <ScrollToTop />
-      <Switch>
-        <MainComponent exact path="/" component={About}/>
-        <MainComponent path="/experience" component={Experience}/>
-        <MainComponent path="/skills" component={Skills}/>
-        <MainComponent path="/education" component={Education}/>
-      </Switch>
+      <Routes>
+        <MainComponent exact path="/" element={<About />}/>
+        <MainComponent path="/experience" element={<Experience />}/>
+        <MainComponent path="/skills" element={<Skills />}/>
+        <MainComponent path="/education" element={<Education />}/>
+      </Routes>
       <MainFooter />
     </Router>    
   );
