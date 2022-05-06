@@ -2,18 +2,12 @@ import React from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { firestoreConnect, isLoaded } from 'react-redux-firebase';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons' ;
 
 import Loading from '../base/loading';
 
 function About(props) {
 
   const {about} = props;
-  const icons = {
-    linkedin: <FontAwesomeIcon icon={faLinkedinIn} size="2x"/>,
-    github: <FontAwesomeIcon icon={faGithub} size="2x"/>
-  };
 
   return(
     <>
@@ -29,7 +23,7 @@ function About(props) {
                 <li className="mr-4" key={id}>
                   <a href={entry.url} className="text-black" title={'My ' + entry.channel} target="_blank" rel="noreferrer">
                     <span className="sr-only">{'My ' + entry.channel}</span>
-                    <span aria-hidden="true">{icons[entry.channel.toLowerCase()]}</span>
+                    <span aria-hidden="true">{entry.channel.toLowerCase()}</span>
                   </a>
                 </li>
               ))}
