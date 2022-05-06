@@ -10,19 +10,20 @@ function About(props) {
   const {about} = props;
 
   return(
-    <>
+    <main>
+      <h1>Hi! I'm Jason Rahm</h1>
       {isLoaded(about) ? (
-        <div className="about d-flex justify-content-center justify-content-lg-between flex-wrap mt-5">
-          <div className="order-lg-2 headshot">
-            <img className="w-100" src={about.about.headshot} alt="Jason Rahm" />
+        <div>
+          <div>
+            <img src={about.about.headshot} alt="Jason Rahm" />
           </div>
-          <div className="main-content order-lg-1 d-flex flex-wrap">
-            <p className="w-100">{about.about.description}</p>
-            <ul aria-label="Social Channels" className="list-unstyled d-flex align-self-end">
+          <div>
+            <p>{about.about.description}</p>
+            <ul aria-label="Social Channels">
               {about.about.social && about.about.social.map((entry, id) => (
-                <li className="mr-4" key={id}>
-                  <a href={entry.url} className="text-black" title={'My ' + entry.channel} target="_blank" rel="noreferrer">
-                    <span className="sr-only">{'My ' + entry.channel}</span>
+                <li key={id}>
+                  <a href={entry.url}  title={'My ' + entry.channel} target="_blank" rel="noreferrer">
+                    <span>{'My ' + entry.channel}</span>
                     <span aria-hidden="true">{entry.channel.toLowerCase()}</span>
                   </a>
                 </li>
@@ -33,7 +34,7 @@ function About(props) {
       ) : (
         <Loading />
       )}
-    </>  
+    </main>  
   )
 }
 

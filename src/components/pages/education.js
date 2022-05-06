@@ -11,16 +11,17 @@ function Education(props) {
   const {schools} = props;
 
   return(
-    <>
+    <main>
+      <h1>My Education</h1>
       { isLoaded(schools) ? (
         Object.keys(schools).map(key => {
           let entry = schools[key];
           return (
-            <section className="card shadow" key={key}>
-              <div className="card-body">
-                <header className="border-bottom mb-3 pb-3">
-                  <h2 className="card-title">{entry.school}</h2>
-                  <h3 className="card-subtitle">{entry.degree} - {entry.major}</h3>
+            <section key={key}>
+              <div>
+                <header>
+                  <h2>{entry.school}</h2>
+                  <h3>{entry.degree} - {entry.major}</h3>
                   <p>{entry.start ? <Date date={entry.start} format='MMMM YYYY' /> : ''} - {entry.end ? <Date date={entry.end} format='MMMM YYYY' /> : 'Present'}</p>
                 </header>
                 <p>{entry.description}</p>
@@ -31,7 +32,7 @@ function Education(props) {
       ) : (
         <Loading />
       )}
-    </>
+    </main>
   )
 }
 

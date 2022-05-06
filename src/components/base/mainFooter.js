@@ -4,11 +4,11 @@ const thisYear = new Date().getFullYear();
 
 function MainFooter() {
   return(
-    <footer className="bg-black">
+    <footer>
       <div>
-        <p className="text-white">
+        <p>
           <span>
-            <span className="sr-only">Copyright</span>
+            <span>Copyright</span>
             <span aria-hidden="true"></span>
             &nbsp;
           </span>

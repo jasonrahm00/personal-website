@@ -8,7 +8,6 @@ import MainFooter from './components/base/mainFooter';
 import MainNav from './components/base/nav/mainNav';
 import Skills from './components/pages/skills';
 import Education from './components/pages/education';
-import MainComponent from './components/base/mainComponent';
 
 function App() {
   return (

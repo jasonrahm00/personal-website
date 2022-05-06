@@ -29,21 +29,22 @@ function Skills(props) {
   const groupedSkills = isLoaded(skills) ? groupSkills({...skills}) : null;
 
   return(
-    <>
+    <main>
+      <h1>My Skills</h1>
       { groupedSkills && groupedSkills !== null ? (
         Object.keys(groupedSkills).map((group, groupIndex) => {
           return (
-            <section className="skill-group card shadow" key={groupIndex}>
-              <div className="card-body">
-                <header className="border-bottom mb-3">
+            <section key={groupIndex}>
+              <div>
+                <header>
                   <h2>{group}</h2>
                 </header>
-                <ul aria-label={group} className="list-unstyled justify-content-center justify-content-xl-start d-flex flex-wrap align-items-end">
+                <ul aria-label={group}>
                   {groupedSkills[group].sort((a, b) => a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1).map(skill => {
                     return (
-                      <li data-skill-id={skill.id} className="skill-item" key={groupIndex + '-' + skill.id}>
-                        <img className="w-100 mb-3" aria-hidden="true" src={skill.logo} alt=""/>
-                        <span className="d-block text-center">{skill.title}</span>
+                      <li data-skill-id={skill.id} key={groupIndex + '-' + skill.id}>
+                        <img aria-hidden="true" src={skill.logo} alt=""/>
+                        <span>{skill.title}</span>
                       </li>
                     )
                   })}
@@ -56,7 +57,7 @@ function Skills(props) {
         ) : 
         <Loading />
       }
-    </>
+    </main>
   )
 }
 

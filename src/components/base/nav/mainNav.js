@@ -4,16 +4,16 @@ import { NavData } from './navData';
 
 function MainNav() {
   return (
-    <nav className="bg-black position-fixed w-100">
-      <ul className="d-flex list-unstyled mb-0">
+    <nav>
+      <ul>
         {NavData && NavData.map((item, index) => {
         return (
           <li key={index}>
-            <NavLink className="text-white d-flex align-items-center p-3 justify-content-center"
+            <NavLink
               exact
               to={item.path}>
-              <span className="d-inline-block" aria-hidden="true">{item.icon}</span>
-              <span className="pl-3 nav-link-text">{item.title}</span>
+              <span aria-hidden="true">{item.icon}</span>
+              <span>{item.title}</span>
             </NavLink>
           </li>
         )

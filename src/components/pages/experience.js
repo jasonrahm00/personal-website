@@ -12,7 +12,8 @@ function Experience(props) {
   const skillHeader = "Skills and Technology Used";
 
   return(
-    <>
+    <main>
+      <h1>My Experience</h1>
       { isLoaded(jobs, skills) ? (
         Object.keys(jobs).map(sectionKey => {
           let job = jobs[sectionKey];
@@ -20,30 +21,30 @@ function Experience(props) {
             return {...skills[skill.id], id: skill.id};
           });
           return (
-            <section className="job card shadow" key={sectionKey}>
-              <div className="card-body">
-                <header className="border-bottom mb-3 pb-3">
-                  <h2 className="card-title">{job.employer}</h2>
-                  <h3 className="card-subtitle">{job.title}</h3>
-                  <p className="m-0">
+            <section key={sectionKey}>
+              <div>
+                <header>
+                  <h2>{job.employer}</h2>
+                  <h3>{job.title}</h3>
+                  <p>
                     {job.start ? <Date date={job.start} format='MMMM YYYY' /> : ''} - {job.end ? <Date date={job.end} format='MMMM YYYY' /> : 'Present'}
                   </p>
                 </header>
                 {job.description && job.description.map((paragraph, id) => <p key={id}>{paragraph}</p>)}
                 {job.skills && job.skills.length ? (
                   <section>
-                    <h3 className="h5 text-secondary">
+                    <h3>
                       <span>{skillHeader}</span>
-                      <span className="sr-only"> at {job.employer}</span>
+                      <span> at {job.employer}</span>
                     </h3>
-                    <ul aria-label={skillHeader + ' at ' + job.employer} className="list-unstyled justify-content-start d-flex flex-wrap align-items-center">
+                    <ul aria-label={skillHeader + ' at ' + job.employer}>
                       {jobSkills
                         .sort((a, b) => a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1)
                         .map(skill => {
                           return (
-                            <li data-job-id={sectionKey} data-skill-id={skill.id} className="m-2 skill-item" title={skill.title} key={sectionKey + '-' + skill.id}>
-                              <span className="sr-only">{skill.title}</span>
-                              <img className="w-100" aria-hidden="true" src={skill.logo} alt=""/>
+                            <li data-job-id={sectionKey} data-skill-id={skill.id} title={skill.title} key={sectionKey + '-' + skill.id}>
+                              <span>{skill.title}</span>
+                              <img aria-hidden="true" src={skill.logo} alt=""/>
                             </li>
                           )
                       })}
@@ -57,7 +58,7 @@ function Experience(props) {
       ) : (
         <Loading />
       )}
-    </>
+    </main>
   )
 }
 
