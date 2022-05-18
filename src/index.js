@@ -6,7 +6,6 @@ import { createFirestoreInstance } from 'redux-firestore';
 
 import firebase from './config/firebase';
 import { store } from './store/store';
-//import './scss/custom.scss';
 import App from './App';
 
 const rrfProps = {
