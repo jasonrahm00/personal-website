@@ -3,6 +3,7 @@ import MenuList from '@mui/material/MenuList';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
 import AppBar from '@mui/material/AppBar';
+import Typography from '@mui/material/Typography';
 
 import { NavData } from './navData';
 
@@ -23,21 +24,31 @@ function MainNav() {
       >
         {NavData && NavData.map((item, index) => {
           return (
-            <MenuItem key={index}>
+            <MenuItem 
+              key={index}
+              sx={{
+                '&:hover': {
+                  backgroundColor: 'primary.main'
+                }
+              }}
+            >
               <Button 
                 href={item.path}
                 sx={{
                   color: 'common.white'
                 }}
               >
-                {item.title}
+                {item.icon}
+                <Typography 
+                  component="span" 
+                  sx={{
+                    lineHeight: '1',
+                    paddingLeft: '.5rem'
+                  }}
+                >
+                  {item.title}
+                </Typography>
               </Button>
-              {/* <NavLink
-                exact
-                to={item.path}>
-                <span aria-hidden="true">{item.icon}</span>
-                <span>{item.title}</span>
-              </NavLink> */}
             </MenuItem>
           )
         })}

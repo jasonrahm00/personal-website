@@ -1,22 +1,27 @@
+import HomeIcon from '@mui/icons-material/Home';
+import WorkIcon from '@mui/icons-material/Work';
+import CodeIcon from '@mui/icons-material/Code';
+import SchoolIcon from '@mui/icons-material/School';
+
 export const NavData = [
   {
     title: 'Home',
     path: '/',
-    icon: '' //<FontAwesomeIcon icon={faHome} />
+    icon: <HomeIcon aria-hidden="true" />
   },
   {
     title: 'Experience',
     path: '/experience',
-    icon: '' //<FontAwesomeIcon icon={faBuilding} />
+    icon: <WorkIcon aria-hidden="true" />
   },
   {
     title: 'Skills',
     path: '/skills',
-    icon: '' //<FontAwesomeIcon icon={faCode} />
+    icon: <CodeIcon aria-hidden="true" />
   },
   {
     title: 'Education',
     path: '/education',
-    icon: '' //<FontAwesomeIcon icon={faGraduationCap} />
+    icon: <SchoolIcon aria-hidden="true" />
   }
 ];
