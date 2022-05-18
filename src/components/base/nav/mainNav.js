@@ -8,21 +8,39 @@ import { NavData } from './navData';
 
 function MainNav() {
   return (
-    <AppBar component="div">
-      <MenuList component="nav">
+    <AppBar 
+      component="nav"
+      sx={{
+        backgroundColor: 'common.black',
+        alignItems: 'center'
+      }}
+    >
+      <MenuList 
+        sx={{
+          display: 'flex',
+          padding: 0
+        }}
+      >
         {NavData && NavData.map((item, index) => {
-        return (
-          <MenuItem key={index}>
-            <Button href={item.path}>{item.title}</Button>
-            {/* <NavLink
-              exact
-              to={item.path}>
-              <span aria-hidden="true">{item.icon}</span>
-              <span>{item.title}</span>
-            </NavLink> */}
-          </MenuItem>
-        )
-      })}
+          return (
+            <MenuItem key={index}>
+              <Button 
+                href={item.path}
+                sx={{
+                  color: 'common.white'
+                }}
+              >
+                {item.title}
+              </Button>
+              {/* <NavLink
+                exact
+                to={item.path}>
+                <span aria-hidden="true">{item.icon}</span>
+                <span>{item.title}</span>
+              </NavLink> */}
+            </MenuItem>
+          )
+        })}
       </MenuList>
     </AppBar>
   )
