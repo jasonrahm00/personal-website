@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
+import './App.css';
 import ScrollToTop from './components/base/nav/scrollToTop';
 import About from './components/pages/about';
 import Experience from './components/pages/experience';

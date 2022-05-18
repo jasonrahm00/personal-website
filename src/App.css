@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+}
+main {
+  margin-top: 50px;
+  min-height: calc(100vh - 50px - 50px);
+}
+.sr-only {
+  position: absolute;
+  width: 0px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+}
