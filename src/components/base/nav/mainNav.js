@@ -1,27 +1,30 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { MenuList, MenuItem } from '@mui/material';
+import MenuList from '@mui/material/MenuList';
+import MenuItem from '@mui/material/MenuItem';
+import Button from '@mui/material/Button';
+import AppBar from '@mui/material/AppBar';
 
 import { NavData } from './navData';
 
 function MainNav() {
   return (
-    <nav>
-      <MenuList>
+    <AppBar component="div">
+      <MenuList component="nav">
         {NavData && NavData.map((item, index) => {
         return (
           <MenuItem key={index}>
-            <NavLink
+            <Button href={item.path}>{item.title}</Button>
+            {/* <NavLink
               exact
               to={item.path}>
               <span aria-hidden="true">{item.icon}</span>
               <span>{item.title}</span>
-            </NavLink>
+            </NavLink> */}
           </MenuItem>
         )
       })}
       </MenuList>
-    </nav>
+    </AppBar>
   )
 }
 
