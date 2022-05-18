@@ -2,8 +2,12 @@ body {
   margin: 0;
 }
 main {
-  margin-top: 50px;
-  min-height: calc(100vh - 50px - 50px);
+  margin-top: 100px;
+  min-height: calc(100vh - 100px - 50px);
+}
+h1 {
+  text-align: center;
+  padding-bottom: 3rem;
 }
 nav .MuiTypography-root,
 .sr-only {
@@ -11,6 +15,7 @@ nav .MuiTypography-root,
   width: 0px;
   height: 1px;
   margin: -1px;
+  padding: 0;
   overflow: hidden;
 }
 @media screen and (min-width: 900px) {
@@ -19,6 +24,7 @@ nav .MuiTypography-root,
     width: unset;
     height: unset;
     margin: unset;
+    padding-left: .5rem;
     overflow: unset;
   }
 }

@@ -22,6 +22,11 @@ const theme = createTheme({
     common: {
       black: '#212529'
     }
+  },
+  typography: {
+    h1: {
+      fontSize: '2.25rem'
+    }
   }
 })
 

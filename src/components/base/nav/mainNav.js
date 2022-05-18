@@ -42,8 +42,7 @@ function MainNav() {
                 <Typography 
                   component="span" 
                   sx={{
-                    lineHeight: '1',
-                    paddingLeft: '.5rem'
+                    lineHeight: '1'
                   }}
                 >
                   {item.title}
