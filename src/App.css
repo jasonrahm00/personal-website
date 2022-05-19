@@ -1,11 +1,13 @@
 body {
   margin: 0;
 }
+
 main {
   margin-top: 100px;
   margin-bottom: 50px;
   min-height: calc(100vh - 150px - 56px);
 }
+
 nav .MuiTypography-root,
 .sr-only {
   position: absolute;
@@ -15,6 +17,17 @@ nav .MuiTypography-root,
   padding: 0;
   overflow: hidden;
 }
+
+.MuiCard-root header {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.MuiCard-root header p {
+  margin: 0;
+}
+
 @media screen and (min-width: 900px) {
   nav .MuiTypography-root {
     position: unset;

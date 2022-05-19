@@ -1,30 +1,39 @@
 import { createTheme } from '@mui/material/styles';
 
+const colors = {
+  primary: '#0053b3',
+  secondary: '#a9193d',
+  black: '#212529'
+}
+
 const Theme = createTheme({
   palette: {
     primary: {
-      main: '#0053b3'
+      main: colors.primary
     },
     secondary: {
-      main: '#a9193d'
+      main: colors.secondary
     },
     common: {
-      black: '#212529'
+      black: colors.black
     }
   },
   typography: {
     h1: {
       fontSize: '2.25rem',
       textAlign: 'center',
-      paddingBottom: '3rem'
+      paddingBottom: '3rem',
+      color: colors.black
     },
     h2: {
       fontSize: '2rem',
-      marginBottom: '1rem'
+      marginBottom: '1rem',
+      color: colors.black
     },
     h3: {
       fontSize: '1.75rem',
-      marginBottom: '1rem'
+      marginBottom: '1rem',
+      color: colors.black
     }
   }
 });
