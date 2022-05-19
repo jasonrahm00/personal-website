@@ -41,7 +41,7 @@ function About(props) {
             />
           </Grid>
           <Grid item xs={12} md={8} sx={{margin: 'auto'}}>
-            <Typography paragraph="true">{about.about.description}</Typography>
+            <Typography paragraph={true}>{about.about.description}</Typography>
             <List 
               aria-label="Social Channels" 
               sx={{

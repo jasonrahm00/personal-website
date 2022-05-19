@@ -26,9 +26,9 @@ function Education(props) {
                 <Box component="header" sx={{borderBottom: '1px solid grey[700]'}}>
                   <Typography variant="h2" component="h2">{entry.school}</Typography>
                   <Typography variant="h3" component="h3">{entry.degree} - {entry.major}</Typography>
-                  <Typography paragraph="true">{entry.start ? <Date date={entry.start} format='MMMM YYYY' /> : ''} - {entry.end ? <Date date={entry.end} format='MMMM YYYY' /> : 'Present'}</Typography>
+                  <Typography paragraph={true}>{entry.start ? <Date date={entry.start} format='MMMM YYYY' /> : ''} - {entry.end ? <Date date={entry.end} format='MMMM YYYY' /> : 'Present'}</Typography>
                 </Box>
-                <Typography paragraph="true">{entry.description}</Typography>
+                <Typography paragraph={true}>{entry.description}</Typography>
               </CardContent>
             </Card>
           )

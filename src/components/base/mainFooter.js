@@ -13,7 +13,7 @@ function MainFooter() {
         component="footer"
       >
         <Typography 
-          paragraph="true"
+          paragraph={true}
           sx={{
             color: 'common.white',
             margin: '0',
