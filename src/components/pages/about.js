@@ -1,4 +1,3 @@
-import React from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { firestoreConnect, isLoaded } from 'react-redux-firebase';
@@ -7,9 +6,6 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';

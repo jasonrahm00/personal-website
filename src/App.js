@@ -1,6 +1,5 @@
-import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 
 import './App.css';
 import ScrollToTop from './components/base/nav/scrollToTop';
@@ -10,29 +9,11 @@ import MainFooter from './components/base/mainFooter';
 import MainNav from './components/base/nav/mainNav';
 import Skills from './components/pages/skills';
 import Education from './components/pages/education';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#0053b3'
-    },
-    secondary: {
-      main: '#a9193d'
-    },
-    common: {
-      black: '#212529'
-    }
-  },
-  typography: {
-    h1: {
-      fontSize: '2.25rem'
-    }
-  }
-})
+import Theme from './Theme';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={Theme}>
       <Router>
         <MainNav />
         <ScrollToTop />
