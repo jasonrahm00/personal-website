@@ -32,14 +32,16 @@ function MainNav() {
                 },
                 '&.Mui-focusVisible': {
                   backgroundColor: 'primary.main'
-                }
+                },
+                padding: 0
               }}
             >
               <Button 
                 href={item.path}
                 disableRipple={true}
                 sx={{
-                  color: 'common.white'
+                  color: 'common.white',
+                  padding: '1rem'
                 }}
               >
                 {item.icon}
