@@ -1,6 +1,13 @@
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { firestoreConnect, isLoaded } from 'react-redux-firebase';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Box from '@mui/material/Box';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
 
 import Loading from '../base/loading';
 
@@ -28,35 +35,77 @@ function Skills(props) {
   const groupedSkills = isLoaded(skills) ? groupSkills({...skills}) : null;
 
   return(
-    <main>
-      <h1>My Skills</h1>
+    <Container component="main">
+      <Typography variant="h1" component="h1">My Skills</Typography>
       { groupedSkills && groupedSkills !== null ? (
         Object.keys(groupedSkills).map((group, groupIndex) => {
           return (
-            <section key={groupIndex}>
-              <div>
-                <header>
-                  <h2>{group}</h2>
-                </header>
-                <ul aria-label={group}>
+            <Card 
+              key={groupIndex} 
+              component="section" 
+              raised={true}
+              sx={{
+                marginBottom: '3rem'
+              }}
+            >
+              <CardContent>
+                <Box component="header">
+                  <Typography variant="h2" component="h2" sx={{margin: 0}}>{group}</Typography>
+                </Box>
+                <List 
+                  aria-label={group} 
+                  sx={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    gap: '4rem',
+                    padding: '2rem',
+                    justifyContent: {xs: 'center', md: 'flex-start'}
+                  }}
+                >
                   {groupedSkills[group].sort((a, b) => a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1).map(skill => {
                     return (
-                      <li data-skill-id={skill.id} key={groupIndex + '-' + skill.id}>
-                        <img aria-hidden="true" src={skill.logo} alt=""/>
-                        <span>{skill.title}</span>
-                      </li>
+                      <ListItem 
+                        data-skill-id={skill.id} 
+                        key={groupIndex + '-' + skill.id}
+                        disablePadding={true}
+                        sx={{
+                          width: 120,
+                          flexDirection: 'column',
+                          alginItems: 'center',
+                          textAlign: 'center'
+                        }}
+                      >
+                        <Box 
+                          component="img" 
+                          src={skill.logo}
+                          aria-hidden="true"
+                          sx={{
+                            width: '100%',
+                            marginBottom: '1rem'
+                          }}
+                        />
+                        <Typography 
+                          component="span"
+                          variant="body1"
+                          sx={{
+                            marginTop: 'auto'
+                          }}
+                        >
+                          {skill.title}
+                        </Typography>
+                      </ListItem>
                     )
                   })}
-                </ul>
-              </div>
+                </List>
+              </CardContent>
               
-            </section>
+            </Card>
           )
         })
         ) : 
         <Loading />
       }
-    </main>
+    </Container>
   )
 }
 

@@ -39,7 +39,8 @@ function MainNav() {
               >
                 {item.icon}
                 <Typography 
-                  component="span" 
+                  component="span"
+                  variant='inherit' 
                   sx={{
                     lineHeight: '1'
                   }}

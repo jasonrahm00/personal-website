@@ -8,8 +8,6 @@ import CardContent from '@mui/material/CardContent';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
 
 import Date from '../base/date';
 import Loading from '../base/loading';
@@ -68,6 +66,7 @@ function Experience(props) {
                           return (
                             <ListItem 
                               key={sectionKey + '-' + skill.id}
+                              data-skill-id={skill.id}
                               sx={{
                                 width: 'auto'
                               }}
@@ -76,7 +75,6 @@ function Experience(props) {
                                 component="img" 
                                 src={skill.logo} 
                                 alt={skill.title}
-                                loading="lazy"
                                 sx={{
                                   width: 35
                                 }}

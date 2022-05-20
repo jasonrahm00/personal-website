@@ -34,6 +34,9 @@ const Theme = createTheme({
       fontSize: '1.75rem',
       marginBottom: '1rem',
       color: colors.black
+    },
+    body1: {
+      color: colors.black
     }
   }
 });
