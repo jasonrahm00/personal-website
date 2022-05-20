@@ -25,14 +25,19 @@ function MainNav() {
           return (
             <MenuItem 
               key={index}
+              tabIndex="-1"
               sx={{
                 '&:hover': {
+                  backgroundColor: 'primary.main'
+                },
+                '&.Mui-focusVisible': {
                   backgroundColor: 'primary.main'
                 }
               }}
             >
               <Button 
                 href={item.path}
+                disableRipple={true}
                 sx={{
                   color: 'common.white'
                 }}

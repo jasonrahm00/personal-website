@@ -75,6 +75,7 @@ function Experience(props) {
                                 component="img" 
                                 src={skill.logo} 
                                 alt={skill.title}
+                                title={skill.title}
                                 sx={{
                                   width: 35
                                 }}
