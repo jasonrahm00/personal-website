@@ -25,7 +25,7 @@ function MainNav() {
           return (
             <MenuItem 
               key={index}
-              tabIndex="-1"
+              tabIndex={-1}
               sx={{
                 '&:hover': {
                   backgroundColor: 'primary.main'

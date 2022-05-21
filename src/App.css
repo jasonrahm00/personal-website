@@ -22,16 +22,6 @@ nav .MuiTypography-root,
   overflow: hidden;
 }
 
-.MuiCard-root header {
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #dee2e6;
-}
-
-.MuiCard-root header p {
-  margin: 0;
-}
-
 @media screen and (min-width: 900px) {
   nav .MuiTypography-root {
     position: unset;

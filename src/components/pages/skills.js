@@ -8,8 +8,7 @@ import CardContent from '@mui/material/CardContent';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-
-import Loading from '../base/loading';
+import Divider from '@mui/material/Divider';
 
 function Skills(props) {
   
@@ -51,6 +50,7 @@ function Skills(props) {
               <CardContent>
                 <Box component="header">
                   <Typography variant="h2" component="h2" sx={{margin: 0}}>{group}</Typography>
+                  <Divider sx={{margin: '1rem 0'}}/>
                 </Box>
                 <List 
                   aria-label={group} 
@@ -103,7 +103,7 @@ function Skills(props) {
           )
         })
         ) : 
-        <Loading />
+        ''
       }
     </Container>
   )
