@@ -9,6 +9,43 @@ import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Divider from '@mui/material/Divider';
+import Skeleton from '@mui/material/Skeleton';
+
+const classes = {
+  list: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '4rem',
+    padding: '2rem',
+    justifyContent: {xs: 'center', md: 'flex-start'}
+  },
+  listItem: {
+    width: 120,
+    flexDirection: 'column',
+    alginItems: 'center',
+    textAlign: 'center'
+  },
+  listImage: {
+    width: '100%',
+    marginBottom: '1rem'
+  },
+  listBody: {
+    marginTop: 'auto'
+  }
+}
+
+const skeletonItems = () => {
+  let items = [];
+  for (let i = 0; i < 18; i++) {
+    items.push(
+      <ListItem disablePadding={true} sx={classes.listItem}>
+        <Skeleton variant="rectangular" width={120} height={120} />
+        <Skeleton width="100%" />
+      </ListItem>
+    )
+  }
+  return items;
+}
 
 function Skills(props) {
   
@@ -47,17 +84,11 @@ function Skills(props) {
               <CardContent>
                 <Box component="header">
                   <Typography variant="h2" component="h2" sx={{margin: 0}}>{group}</Typography>
-                  <Divider sx={{margin: '1rem 0'}}/>
+                  <Divider/>
                 </Box>
                 <List 
                   aria-label={group} 
-                  sx={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    gap: '4rem',
-                    padding: '2rem',
-                    justifyContent: {xs: 'center', md: 'flex-start'}
-                  }}
+                  sx={classes.list}
                 >
                   {groupedSkills[group].sort((a, b) => a.title.toLowerCase() > b.title.toLowerCase() ? 1 : -1).map(skill => {
                     return (
@@ -65,28 +96,18 @@ function Skills(props) {
                         data-skill-id={skill.id} 
                         key={groupIndex + '-' + skill.id}
                         disablePadding={true}
-                        sx={{
-                          width: 120,
-                          flexDirection: 'column',
-                          alginItems: 'center',
-                          textAlign: 'center'
-                        }}
+                        sx={classes.listItem}
                       >
                         <Box 
                           component="img" 
                           src={skill.logo}
                           aria-hidden="true"
-                          sx={{
-                            width: '100%',
-                            marginBottom: '1rem'
-                          }}
+                          sx={classes.listImage}
                         />
                         <Typography 
                           component="span"
                           variant="body1"
-                          sx={{
-                            marginTop: 'auto'
-                          }}
+                          sx={classes.listBody}
                         >
                           {skill.title}
                         </Typography>
@@ -99,8 +120,19 @@ function Skills(props) {
             </Card>
           )
         })
-        ) : 
-        ''
+        ) : (
+          <Card component="section" raised={true}>
+            <CardContent>
+              <Box component="header">
+                <Skeleton height={60} width="35%" />
+              </Box>
+              <Divider/>
+              <List sx={classes.list}>
+                {skeletonItems()}
+              </List>
+            </CardContent>
+          </Card>
+        )
       }
     </Container>
   )

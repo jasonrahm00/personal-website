@@ -20,7 +20,7 @@ export const FilledCard = ({...props}) => {
             {props.data.dates.end ? <Date date={props.data.dates.end} format='MMMM YYYY' /> : 'Present'}
           </Typography>
         </Box>
-        <Divider sx={{marginBottom: '1rem'}}/>
+        <Divider/>
         {props.data.description && props.data.description.map((description, id) => {
           return (
             <Typography paragraph={true} key={id}>{description}</Typography>

@@ -46,6 +46,13 @@ const Theme = createTheme({
           marginBottom: '3rem'
         }
       }
+    },
+    MuiDivider: {
+      styleOverrides: {
+        root: {
+          margin: '1rem 0'
+        }
+      }
     }
   }
 });
