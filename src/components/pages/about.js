@@ -10,8 +10,7 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-
-import Loading from '../base/loading';
+import Skeleton from '@mui/material/Skeleton';
 
 const iconStyles = {fontSize: '2.5rem', color: 'primary.main'}
 const socialIcons = {
@@ -52,7 +51,7 @@ function About(props) {
               {about.about.social && about.about.social.map((entry, id) => (
                 <ListItem 
                   key={id} 
-                  sx={{width: 'unset'}}
+                  sx={{width: 'auto'}}
                 >
                   <Button 
                     href={entry.url} 
@@ -69,7 +68,18 @@ function About(props) {
           </Grid>
         </Grid>
       ) : (
-        <Loading />
+        <Grid container direction='row-reverse' columnSpacing={12} rowSpacing={3}>
+          <Grid item xs={12} md={4} sx={{textAlign: 'center'}}>
+            <Skeleton variant="rectangular" height={250} width={250} sx={{margin: {xs: '0 auto', md: 'unset'}}}/>
+          </Grid>
+          <Grid item xs={12} md={8} sx={{margin: 'auto'}}>
+            <Skeleton variant="rectangular" height={120} width={{xs: '100%', md: '600px'}} />
+            <List sx={{display: 'flex', justifyContent: 'flex-start'}}>
+              <ListItem sx={{width: 'auto'}}><Skeleton variant="circular" width={35} height={35}/></ListItem>
+              <ListItem sx={{width: 'auto'}}><Skeleton variant="circular" width={35} height={35}/></ListItem>
+            </List>
+          </Grid>
+        </Grid>
       )}
     </Container>  
   )
