@@ -56,7 +56,6 @@ function About(props) {
                   <Button 
                     href={entry.url} 
                     title={'My ' + entry.channel} 
-                    target="_blank" 
                     rel="noreferrer"
                   >
                     <span className='sr-only'>{'My ' + entry.channel}</span>
