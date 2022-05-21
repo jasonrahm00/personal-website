@@ -38,6 +38,15 @@ const Theme = createTheme({
     body1: {
       color: colors.black
     }
+  },
+  components: {
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          marginBottom: '3rem'
+        }
+      }
+    }
   }
 });
 

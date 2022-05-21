@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Skeleton from '@mui/material/Skeleton';
 
-import Date from '../date';
+import Date from './date';
 
 export const FilledCard = ({...props}) => {
   return(
@@ -21,7 +21,12 @@ export const FilledCard = ({...props}) => {
           </Typography>
         </Box>
         <Divider sx={{marginBottom: '1rem'}}/>
-        <Typography paragraph={true}>{props.data.description}</Typography>
+        {props.data.description && props.data.description.map((description, id) => {
+          return (
+            <Typography paragraph={true} key={id}>{description}</Typography>
+          )
+        })}
+        {props.footerContent ? props.footerContent : ''}
       </CardContent>
     </Card>
   )
@@ -34,7 +39,7 @@ export const BlankCard = ({...props}) => {
         <Box component="header">
           <Skeleton height={60} width="35%" />
           <Skeleton height={60} width="35%"/>
-          <Skeleton height={40} width="50%" sx={{marginBottom: '1rem'}}/>
+          <Skeleton height={40} width="20%" sx={{marginBottom: '1rem'}}/>
         </Box>
         <Divider sx={{marginBottom: '1rem'}}/>
         <Skeleton variant="rectangular" width="100%" height="150px" />

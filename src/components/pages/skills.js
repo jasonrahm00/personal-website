@@ -43,9 +43,6 @@ function Skills(props) {
               key={groupIndex} 
               component="section" 
               raised={true}
-              sx={{
-                marginBottom: '3rem'
-              }}
             >
               <CardContent>
                 <Box component="header">
