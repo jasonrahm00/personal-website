@@ -2,13 +2,13 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 
 import './App.css';
-import ScrollToTop from './components/base/nav/scrollToTop';
-import About from './components/pages/about';
-import Experience from './components/pages/experience';
-import MainFooter from './components/base/mainFooter';
-import MainNav from './components/base/nav/mainNav';
-import Skills from './components/pages/skills';
-import Education from './components/pages/education';
+import ScrollToTop from './components/base/nav/ScrollToTop';
+import About from './components/pages/About';
+import Experience from './components/pages/Experience';
+import MainFooter from './components/base/MainFooter';
+import MainNav from './components/base/nav/MainNav';
+import Skills from './components/pages/Skills';
+import Education from './components/pages/Education';
 import Theme from './Theme';
 
 function App() {

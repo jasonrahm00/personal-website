@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
 import Skeleton from '@mui/material/Skeleton';
 
-import Date from './date';
+import Date from './Date';
 
 export const FilledCard = ({...props}) => {
   return(

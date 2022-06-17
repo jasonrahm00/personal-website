@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import AppBar from '@mui/material/AppBar';
 import Typography from '@mui/material/Typography';
 
-import { NavData } from './navData';
+import { NavData } from './NavData';
 
 function MainNav() {
   return (

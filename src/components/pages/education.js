@@ -4,7 +4,7 @@ import { firestoreConnect, isLoaded } from 'react-redux-firebase';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
-import {FilledCard, BlankCard} from '../base/customCards';
+import {FilledCard, BlankCard} from '../base/CustomCards';
 
 function Education(props) {
 

@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 
-import {FilledCard, BlankCard} from '../base/customCards';
+import {FilledCard, BlankCard} from '../base/CustomCards';
 
 const skillHeader = "Skills and Technology Used";
 
