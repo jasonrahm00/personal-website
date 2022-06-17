@@ -1,3 +1,4 @@
+import React from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { firestoreConnect, isLoaded } from 'react-redux-firebase';
@@ -17,6 +18,7 @@ const socialIcons = {
   linkedin: <LinkedInIcon sx={iconStyles} />,
   github: <GitHubIcon sx={iconStyles} />
 }
+
 function About(props) {
 
   const {about} = props;

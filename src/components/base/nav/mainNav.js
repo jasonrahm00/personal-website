@@ -1,3 +1,4 @@
+import React from 'react';
 import MenuList from '@mui/material/MenuList';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
@@ -6,7 +7,7 @@ import Typography from '@mui/material/Typography';
 
 import { NavData } from './NavData';
 
-function MainNav() {
+export default function MainNav() {
   return (
     <AppBar 
       component="nav"
@@ -62,5 +63,3 @@ function MainNav() {
     </AppBar>
   )
 }
-
-export default MainNav

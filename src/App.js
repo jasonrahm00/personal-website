@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
 
@@ -11,7 +12,7 @@ import Skills from './components/pages/Skills';
 import Education from './components/pages/Education';
 import Theme from './Theme';
 
-function App() {
+export default function App() {
   return (
     <ThemeProvider theme={Theme}>
       <Router>
@@ -28,5 +29,3 @@ function App() {
     </ThemeProvider>
   );
 }
-
-export default App;

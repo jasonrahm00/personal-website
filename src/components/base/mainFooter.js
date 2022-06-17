@@ -1,3 +1,4 @@
+import React from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -5,7 +6,7 @@ import CopyrightIcon from '@mui/icons-material/Copyright';
 
 const thisYear = new Date().getFullYear();
 
-function MainFooter() {
+export default function MainFooter() {
   return(
     <Box sx={{backgroundColor: 'common.black'}}>
       <Container 
@@ -35,5 +36,3 @@ function MainFooter() {
     
   )
 }
-
-export default MainFooter;
