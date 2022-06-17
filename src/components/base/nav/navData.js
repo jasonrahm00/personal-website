@@ -2,6 +2,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import WorkIcon from '@mui/icons-material/Work';
 import CodeIcon from '@mui/icons-material/Code';
 import SchoolIcon from '@mui/icons-material/School';
+import KeyboardIcon from '@mui/icons-material/Keyboard';
 
 export const NavData = [
   {
@@ -23,5 +24,10 @@ export const NavData = [
     title: 'Education',
     path: '/education',
     icon: <SchoolIcon aria-hidden="true" />
+  },
+  {
+    title: 'Applications',
+    path: '/applications',
+    icon: <KeyboardIcon aria-hidden="true" />
   }
 ];

@@ -11,6 +11,7 @@ import MainNav from './components/base/nav/MainNav';
 import Skills from './components/pages/Skills';
 import Education from './components/pages/Education';
 import Theme from './Theme';
+import Applications from './components/pages/Applications';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Route exact path="/experience" render={() => <Experience />}/>
           <Route exact path="/skills" render={() => <Skills />}/>
           <Route exact path="/education" render={() => <Education />}/>
+          <Route exact path="/applications" render={() => <Applications />}/>
         </Switch>
         <MainFooter />
       </Router>    

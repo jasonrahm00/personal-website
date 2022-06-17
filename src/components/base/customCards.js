@@ -14,12 +14,16 @@ export const FilledCard = ({...props}) => {
       <CardContent>
         <Box component="header">
           <Typography variant="h2" component="h2">{props.data.header}</Typography>
-          <Typography variant="h3" component="h3">{props.data.subHeader}</Typography>
-          <Typography paragraph={true} sx={{marginBottom: '1rem'}}>
-            {props.data.dates.start ? <Date date={props.data.dates.start} format='MMMM YYYY' /> : ''} 
-            &nbsp;-&nbsp; 
-            {props.data.dates.end ? <Date date={props.data.dates.end} format='MMMM YYYY' /> : 'Present'}
-          </Typography>
+          {props.data.subHeader ? (
+            <Typography variant="h3" component="h3">{props.data.subHeader}</Typography>
+          ) : ''}
+          {props.data.dates ? (
+            <Typography paragraph={true} sx={{marginBottom: '1rem'}}>
+              {props.data.dates.start ? <Date date={props.data.dates.start} format='MMMM YYYY' /> : ''} 
+              &nbsp;-&nbsp; 
+              {props.data.dates.end ? <Date date={props.data.dates.end} format='MMMM YYYY' /> : 'Present'}
+            </Typography>
+          ) : ''}
         </Box>
         <Divider/>
         {props.data.description && props.data.description.map((description, id) => {
