@@ -1,3 +1,4 @@
+import React from 'react'
 import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -15,9 +16,14 @@ export const FilledCard = ({...props}) => {
           <Typography variant="h2" component="h2">{props.data.header}</Typography>
           <Typography variant="h3" component="h3">{props.data.subHeader}</Typography>
           <Typography paragraph={true} sx={{marginBottom: '1rem'}}>
-            {props.data.dates.start ? <Date date={props.data.dates.start} format='MMMM YYYY' /> : ''} 
-            &nbsp;-&nbsp; 
-            {props.data.dates.end ? <Date date={props.data.dates.end} format='MMMM YYYY' /> : 'Present'}
+            {props.data.dates && (
+              <React.Fragment>
+                {props.data.dates.start ? <Date date={props.data.dates.start} format='MMMM YYYY' /> : ''} 
+                &nbsp;-&nbsp; 
+                {props.data.dates.end ? <Date date={props.data.dates.end} format='MMMM YYYY' /> : 'Present'}
+              </React.Fragment>
+            )}
+            
           </Typography>
         </Box>
         <Divider/>

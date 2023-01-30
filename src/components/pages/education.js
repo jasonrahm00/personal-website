@@ -19,10 +19,6 @@ function Education(props) {
           let data = {
             header: entry.school,
             subHeader: entry.degree + ' - ' + entry.major,
-            dates: {
-              start: entry.start,
-              end: entry.end
-            },
             description: [entry.description]
           }
           return (
