@@ -72,7 +72,7 @@ function About(props) {
             <Skeleton variant="rectangular" height={250} width={250} sx={{margin: {xs: '0 auto', md: 'unset'}}}/>
           </Grid>
           <Grid item xs={12} md={8} sx={{margin: 'auto'}}>
-            <Skeleton variant="rectangular" height={120} width={{xs: '100%', md: '600px'}} />
+            <Skeleton variant="rectangular" height={120} sx={{width: {xs: '100%', md: '600px'}}} />
             <List sx={{display: 'flex', justifyContent: 'flex-start'}}>
               <ListItem sx={{width: 'auto'}}><Skeleton variant="circular" width={35} height={35}/></ListItem>
               <ListItem sx={{width: 'auto'}}><Skeleton variant="circular" width={35} height={35}/></ListItem>
